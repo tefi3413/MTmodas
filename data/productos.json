@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "nombre": "Jean maxi palazzo gris",
+    "precio": 30000,
+    "talles": [
+      "40",
+      "42",
+      "44",
+      "46"
+    ],
+    "categoria": "pantalones",
+    "imagenes": [
+      "img/pantalones/gris-acid-frente.jpg",
+      "img/pantalones/gris-acid-lado.jpg",
+      "img/pantalones/gris-acid-espalda.jpg"
+    ],
+    "descripcion": "Jean palazzo en tono gris piedra, lavado acid wash. Tiro alto y caída amplia desde la cadera. La modelo esta usando un 42."
+  },
+  {
+    "id": 2,
+    "nombre": "Jean maxi palazzo azul",
+    "precio": 30000,
+    "talles": [
+      "40",
+      "42",
+      "44",
+      "46"
+    ],
+    "categoria": "pantalones",
+    "imagenes": [
+      "img/pantalones/azul-clasico-frente.jpg",
+      "img/pantalones/azul-clasico-lado.jpg" , 
+      "img/pantalones/azul-clasico-espalda.jpg"
+    ],
+    "descripcion": "Jean wide leg azul, tiro medio, corte recto y caída amplia.La modelo esta usando un 40."
+  },
+  {
+    "id": 3,
+    "nombre": "Jean maxi palazzo flecos",
+    "precio": 30000,
+    "talles": [
+      "40",
+      "42",
+      "44",
+      "46"
+    ],
+    "categoria": "pantalones",
+    "imagenes": [
+      "img/pantalones/azul-flecos-frente.jpg",
+      "img/pantalones/azul-flecos-espalda.jpg"
+    ],
+    "descripcion": "Jean maxi palazzo con dobladillo deshilachado a mano. Tiro alto y caída amplia. La modelo esta usando un 40."
+  
+  },
+  {
+    "id": 4,
+    "nombre": "Jean oxford",
+    "precio": 25000,
+    "talles": [
+      "40",
+      "42",
+      "44",
+      "46"
+    ],
+    "categoria": "pantalones",
+    "imagenes": [
+	"img/pantalones/azul-entubado-frente.jpg",
+	"img/pantalones/azul-entubado-lado.jpg"
+
+    ],
+    "descripcion": "Jean oxford, corte entubado con costuras a la vista. Tiro alto.La modelo lleva un 42."
+  },
+  {
+    "id": 5,
+    "nombre": "Jean wide leg azul marino",
+    "precio": 25000,
+    "talles": [
+      "40",
+      "42",
+      "44",
+      "46"
+    ],
+    "categoria": "pantalones",
+    "imagenes": [
+      "img/pantalones/wide-leg-frente.jpg",
+      "img/pantalones/wide-leg-lado.jpg" ,
+      "img/pantalones/wide-leg-espalda.jpg"
+    ],
+    "descripcion": "Jean wide leg, corte clásico sin costuras marcadas. Tiro medio, cierre con botón dorado. La modelo lleva un 42."
+  },
+  {
+    "id": 6,
+    "nombre": "Remera círculos",
+    "precio": 13000,
+    "talles": [
+      "2",
+      "3",
+      "4"
+    ],
+    "categoria": "remeras",
+    "imagenes": [
+      "img/remeras/circulos.jpg"
+    ],
+    "descripcion": "Remera recta suelta  con estampa de círculos abstractos. Talle de la modelo 2."
+  },
+  {
+    "id": 7,
+    "nombre": "Remera floral",
+    "precio": 13000,
+    "talles": [
+      "2",
+      "3",
+      "4"
+    ],
+    "categoria": "remeras",
+    "imagenes": [
+      "img/remeras/floral-corazon.jpg"
+    ],
+    "descripcion": "Remera recta suelta con estampa floral y frase. Talle de la modelo: 2."
+  },
+  {
+    "id": 8,
+    "nombre": "Remera arcoíris",
+    "precio": 13000,
+    "talles": [
+      "2",
+      "3",
+      "4"
+    ],
+    "categoria": "remeras",
+    "imagenes": [
+      "img/remeras/arcoiris.jpg"
+    ],
+    "descripcion": "Remera recta suelta con estampa de arcoíris. Talle de la modelo: 2."
+  },
+  {
+    "id": 9,
+    "nombre": "Remera Amar",
+    "precio": 13000,
+    "talles": [
+      "2",
+      "3",
+      "4"
+    ],
+    "categoria": "remeras",
+    "imagenes": [
+      "img/remeras/texto-cursiva.jpg"
+    ],
+    "descripcion": "Remera recta suelta con estampa de Amar las cosas simples te da vida. Talle de la modelo: 2."
+  }
+]

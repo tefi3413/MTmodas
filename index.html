@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maria Teresa Modas — Catálogo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <img src="img/logo-mt.png" alt="María Teresa Modas" class="logo" onerror="this.style.display='none'">
+      <div class="brand">
+        <h1>Maria Teresa Modas</h1>
+        <p class="tagline">Tu lugar de confianza.</p>
+      </div>
+      <nav class="contacto-bar" aria-label="Contacto">
+        <a href="https://wa.me/542995185092" target="_blank" rel="noopener" class="contacto-link">
+          <span class="contacto-icono">☎</span> WhatsApp
+        </a>
+        <!-- Verificá que este sea el link/usuario correcto de Instagram -->
+        <a href="https://instagram.com/mtmodas" target="_blank" rel="noopener" class="contacto-link">
+          <span class="contacto-icono">◎</span> Instagram
+        </a>
+        <!-- TODO: reemplazar por el link real de Facebook cuando lo tengas -->
+        <a href="#" class="contacto-link contacto-pendiente">
+          <span class="contacto-icono">f</span> Facebook
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Las categorías se dibujan solas según lo que haya en productos.json -->
+  <nav class="tag-rack" id="categorias" aria-label="Secciones del catálogo"></nav>
+
+  <main>
+    <p class="status" id="status">Cargando catálogo…</p>
+    <section class="catalogo" id="catalogo" aria-live="polite"></section>
+  </main>
+
+  <!-- Detalle de producto (se llena por JS al hacer click en una tarjeta) -->
+  <div class="detalle-overlay" id="detalleOverlay" hidden>
+    <div class="detalle-panel" role="dialog" aria-modal="true" aria-labelledby="detalleNombre">
+      <button class="detalle-cerrar" id="detalleCerrar" aria-label="Cerrar">×</button>
+      <div class="detalle-galeria" id="detalleGaleria"></div>
+      <div class="detalle-info">
+        <h2 id="detalleNombre"></h2>
+        <p class="detalle-precio" id="detallePrecio"></p>
+        <div class="detalle-talles" id="detalleTalles"></div>
+        <p class="detalle-descripcion" id="detalleDescripcion"></p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>Maria Teresa Modas — Cipolletti,Río Negro.</p>
+    <nav class="contacto-bar contacto-bar-footer" aria-label="Contacto">
+      <a href="https://wa.me/542995185092" target="_blank" rel="noopener" class="contacto-link">☎ +54 2995185092</a>
+      <a href="https://instagram.com/mtmodas" target="_blank" rel="noopener" class="contacto-link">◎ Instagram</a>
+      <a href="#" class="contacto-link contacto-pendiente">f Facebook</a>
+    </nav>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
