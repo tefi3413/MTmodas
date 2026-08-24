@@ -18,6 +18,22 @@
   --radius: 6px;
 }
 
+/* ===== Barra Anuncio Superior ===== */
+.top-announcement-bar {
+  background-color: var(--wine-deep); /* Fondo oscuro (borravino/vino) */
+  color: var(--white);
+  text-align: center;
+  padding: 0.4rem 1rem;
+  font-size: 0.8rem;
+  font-family: var(--font-tag);
+  letter-spacing: 0.03em;
+}
+
+.top-announcement-bar p {
+  margin: 0;
+  font-weight: 500;
+}
+
 *{ box-sizing: border-box; }
 
 body{
