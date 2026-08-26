@@ -148,5 +148,140 @@
       "img/remeras/texto-cursiva.jpg"
     ],
     "descripcion": "Remera recta suelta con estampa de Amar las cosas simples te da vida. Talle de la modelo: 2."
+  } ,
+
+  {
+    "id": 10,
+    "nombre": "Remera lunares",
+    "precio": 13000,
+    "talles": [
+      "3"
+    ],
+    "categoria": "remeras",
+    "imagenes": [
+      "img/remeras/lunares-azules.jpg" ,
+      "img/remeras/lunares-azules-lado.jpg"
+    ],
+    "descripcion": "Remera entallada a lunares con cuello redondo. Talle de la modelo: 2."
+   } , 
+
+  {
+    "id": 11,
+    "nombre": "Remera frase mientras uno este vivo",
+    "precio": 13000,
+    "talles": [
+      "3"
+    ],
+    "categoria": "remeras",
+    "imagenes": [
+      "img/remeras/frase-mientras-uno-este-vivo.jpg" 
+    ],
+    "descripcion": "Remera recta suelta. Talle de la modelo: 2."
   }
+,
+
+  {
+    "id": 12,
+    "nombre": "Buzo Positive",
+    "precio": 35000,
+    "talles": [
+      "M"
+    ],
+    "categoria": "buzos",
+    "imagenes": [
+      "img/buzos/buzo-beige.jpg" , 
+     "img/buzos/buzo-beige-espalda.jpg" 
+    ],
+    "descripcion": "Buzo con dieseño en espalda. Talle de la modelo: M."
+  } ,
+
+  {
+    "id": 13,
+    "nombre": "Buzo Evangelion",
+    "precio": 35000,
+    "talles": [
+      "M"
+    ],
+    "categoria": "buzos",
+    "imagenes": [
+      "img/buzos/buzo-evangelion-M.jpg" , 
+     "img/buzos/buzo-evangelion-espalda-M.jpg" 
+    ],
+    "descripcion": "Buzo con dieseño en espalda (serie Evangelion). Talle de la modelo: M."
+   } ,   
+  
+
+  {
+    "id": 14,
+    "nombre": "Buzo canguro gris",
+    "precio": 35000,
+    "talles": [
+      "S"
+    ],
+    "categoria": "buzos",
+    "imagenes": [
+      "img/buzos/buzo-gris.jpg"  
+    ],
+    "descripcion": "Buzo con liso con bolsillo por delante. Talle de la modelo: S."
+   } , 
+  
+
+  {
+    "id": 15,
+    "nombre": "Buzo hombre salmon",
+    "precio": 35000,
+    "talles": [
+      "L"
+    ],
+    "categoria": "buzos",
+    "imagenes": [
+      "img/buzos/buzo-salmon.jpg" ,
+    "img/buzo-salmon-espalda.jpg"  
+    ],
+    "descripcion": "Buzo con liso con bolsillo por delante. Talle del  modelo: L."
+   } , 
+  
+
+  {
+    "id": 16,
+    "nombre": "Buzo Evangelion beige",
+    "precio": 35000,
+    "talles": [
+      "M"
+    ],
+    "categoria": "buzos",
+    "imagenes": [
+      "img/buzos/buzo-evangelion.jpg" ,
+    "img/buzo-evangelion-espalda.jpg"  
+    ],
+    "descripcion": "Buzo con diseño en espalda. Talle del  modelo: M."
+   } , 
+  
+
+  {
+    "id": 16,
+    "nombre": "Buzo rayado",
+    "precio": 35000,
+    "talles": [
+      "xxL"
+    ],
+    "categoria": "buzos",
+    "imagenes": [
+      "img/buzos/buzo-rayado.jpg" ,
+    "img/buzo-rayado-costado.jpg"  
+    ],
+    "descripcion": "Buzo con liso con bolsillo por delante. Talle del  modelo: L."
+   }  
+  
 ]
+
+
+
+
+
+
+
+
+
+
+
