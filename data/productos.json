@@ -236,7 +236,7 @@
     "categoria": "buzos",
     "imagenes": [
       "img/buzos/buzo-salmon.jpg" ,
-    "img/buzo-salmon-espalda.jpg"  
+    "img/buzos/buzo-salmon-espalda.jpg"  
     ],
     "descripcion": "Buzo con liso con bolsillo por delante. Talle del  modelo: L."
    } , 
@@ -252,7 +252,7 @@
     "categoria": "buzos",
     "imagenes": [
       "img/buzos/buzo-evangelion.jpg" ,
-    "img/buzo-evangelion-espalda.jpg"  
+    "img/buzos/buzo-evangelion-espalda.jpg"  
     ],
     "descripcion": "Buzo con diseño en espalda. Talle del  modelo: M."
    } , 
@@ -268,7 +268,7 @@
     "categoria": "buzos",
     "imagenes": [
       "img/buzos/buzo-rayado.jpg" ,
-    "img/buzo-rayado-costado.jpg"  
+    "img/buzos/buzo-rayado-costado.jpg"  
     ],
     "descripcion": "Buzo con liso con bolsillo por delante. Talle del  modelo: L."
    }  
