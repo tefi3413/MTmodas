@@ -271,9 +271,133 @@
     "img/buzos/buzo-rayado-costado.jpg"  
     ],
     "descripcion": "Buzo con liso con bolsillo por delante. Talle del  modelo: L."
-   }  
-  
+   } ,
+ 
+
+  {
+    "id": 17,
+    "nombre": "Chomba negra",
+    "precio": 29000,
+    "talles": [
+      "42"
+    ],
+    "categoria": "remeras",
+    "imagenes": [
+      "img/remeras/chomba-negra-frente.jpg" 
+    ],
+    "descripcion": "Chomba negra con detalles blancos. Talle del  modelo: 44."
+   } ,
+
+
+  {
+    "id": 18,
+    "nombre": "Chomba bordo",
+    "precio": 29000,
+    "talles": [
+      "42", "44", "46"
+    ],
+    "categoria": "remeras",
+    "imagenes": [
+      "img/remeras/chomba-bordo.jpg" ,
+     "img/remeras/chomba-borod-lado.jpg" 
+    ],
+    "descripcion": "Chomba lisa. Talle del modelo: 44.."
+   } ,
+
+
+  {
+    "id": 19,
+    "nombre": "Chomba blanca",
+    "precio": 29000,
+    "talles": [
+      "44", "46"
+    ],
+    "categoria": "remeras",
+    "imagenes": [
+      "img/remeras/chomba-blanca.jpg" 
+    ],
+    "descripcion": "Chomba con detalles negros. Talle del modelo: 44."
+   } ,
+
+
+  {
+    "id": 20,
+    "nombre": "Campera verde",
+    "precio": 39000,
+    "talles": [
+      "S"
+    ],
+    "categoria": "camperas",
+    "imagenes": [
+      "img/camperas/campera-verde.jpg" 
+    ],
+    "descripcion": "Campera con bolsillos delanteros. Talle del modelo: S."
+   } ,
+
+
+  {
+    "id": 21,
+    "nombre": "Campera roja",
+    "precio": 39000,
+    "talles": [
+      "M"
+    ],
+    "categoria": "camperas",
+    "imagenes": [
+      "img/camperas/campera-roja.jpg" 
+    ],
+    "descripcion": "Campera con bolsillos delanteros. Talle del modelo: M."
+   } ,
+
+
+  {
+    "id": 22,
+    "nombre": "Campera marron",
+    "precio": 39000,
+    "talles": [
+      "M"
+    ],
+    "categoria": "camperas",
+    "imagenes": [
+      "img/camperas/campera-marron.jpg" 
+    ],
+    "descripcion": "Campera con bolsillos delanteros. Talle del modelo: M."
+   } ,
+
+
+  {
+    "id": 23,
+    "nombre": "Campera gris",
+    "precio": 39000,
+    "talles": [
+      "S"
+    ],
+    "categoria": "camperas",
+    "imagenes": [
+      "img/camperas/campera-gris.jpg",
+     "img/camperas/campera-gris-espalda.jpg" 
+    ],
+    "descripcion": "Campera con bolsillos delanteros. Talle del modelo: S."
+   } ,
+
+
+  {
+    "id": 24,
+    "nombre": "Campera blanca",
+    "precio": 39000,
+    "talles": [
+      "XXL"
+    ],
+    "categoria": "camperas",
+    "imagenes": [
+      "img/camperas/campera-blanca.jpg" ,
+      "img/camperas/campera-blanca-espalda" 
+    ],
+    "descripcion": "Campera con bolsillos delanteros. Talle del modelo: XXL."
+   } 
 ]
+
+
 
 
 
