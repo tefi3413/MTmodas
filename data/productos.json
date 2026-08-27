@@ -30,7 +30,7 @@
     "categoria": "pantalones",
     "imagenes": [
       "img/pantalones/azul-clasico-frente.jpg",
-      "img/pantalones/azul-clasico-lado.jpg" , 
+      "img/pantalones/azul-clasico-lado.jpg",
       "img/pantalones/azul-clasico-espalda.jpg"
     ],
     "descripcion": "Jean wide leg azul, tiro medio, corte recto y caída amplia.La modelo esta usando un 40."
@@ -51,7 +51,6 @@
       "img/pantalones/azul-flecos-espalda.jpg"
     ],
     "descripcion": "Jean maxi palazzo con dobladillo deshilachado a mano. Tiro alto y caída amplia. La modelo esta usando un 40."
-  
   },
   {
     "id": 4,
@@ -65,9 +64,8 @@
     ],
     "categoria": "pantalones",
     "imagenes": [
-	"img/pantalones/azul-entubado-frente.jpg",
-	"img/pantalones/azul-entubado-lado.jpg"
-
+      "img/pantalones/azul-entubado-frente.jpg",
+      "img/pantalones/azul-entubado-lado.jpg"
     ],
     "descripcion": "Jean oxford, corte entubado con costuras a la vista. Tiro alto.La modelo lleva un 42."
   },
@@ -84,7 +82,7 @@
     "categoria": "pantalones",
     "imagenes": [
       "img/pantalones/wide-leg-frente.jpg",
-      "img/pantalones/wide-leg-lado.jpg" ,
+      "img/pantalones/wide-leg-lado.jpg",
       "img/pantalones/wide-leg-espalda.jpg"
     ],
     "descripcion": "Jean wide leg, corte clásico sin costuras marcadas. Tiro medio, cierre con botón dorado. La modelo lleva un 42."
@@ -148,8 +146,7 @@
       "img/remeras/texto-cursiva.jpg"
     ],
     "descripcion": "Remera recta suelta con estampa de Amar las cosas simples te da vida. Talle de la modelo: 2."
-  } ,
-
+  },
   {
     "id": 10,
     "nombre": "Remera lunares",
@@ -159,12 +156,11 @@
     ],
     "categoria": "remeras",
     "imagenes": [
-      "img/remeras/lunares-azules.jpg" ,
+      "img/remeras/lunares-azules.jpg",
       "img/remeras/lunares-azules-lado.jpg"
     ],
     "descripcion": "Remera entallada a lunares con cuello redondo. Talle de la modelo: 2."
-   } , 
-
+  },
   {
     "id": 11,
     "nombre": "Remera frase mientras uno este vivo",
@@ -174,12 +170,10 @@
     ],
     "categoria": "remeras",
     "imagenes": [
-      "img/remeras/frase-mientras-uno-este-vivo.jpg" 
+      "img/remeras/frase-mientras-uno-este-vivo.jpg"
     ],
     "descripcion": "Remera recta suelta. Talle de la modelo: 2."
-  }
-,
-
+  },
   {
     "id": 12,
     "nombre": "Buzo Positive",
@@ -189,12 +183,11 @@
     ],
     "categoria": "buzos",
     "imagenes": [
-      "img/buzos/buzo-beige.jpg" , 
-     "img/buzos/buzo-beige-espalda.jpg" 
+      "img/buzos/buzo-beige.jpg",
+      "img/buzos/buzo-beige-espalda.jpg"
     ],
     "descripcion": "Buzo con dieseño en espalda. Talle de la modelo: M."
-  } ,
-
+  },
   {
     "id": 13,
     "nombre": "Buzo Evangelion",
@@ -204,13 +197,11 @@
     ],
     "categoria": "buzos",
     "imagenes": [
-      "img/buzos/buzo-evangelion-M.jpg" , 
-     "img/buzos/buzo-evangelion-espalda-M.jpg" 
+      "img/buzos/buzo-evangelion-M.jpg",
+      "img/buzos/buzo-evangelion-espalda-M.jpg"
     ],
     "descripcion": "Buzo con dieseño en espalda (serie Evangelion). Talle de la modelo: M."
-   } ,   
-  
-
+  },
   {
     "id": 14,
     "nombre": "Buzo canguro gris",
@@ -220,12 +211,10 @@
     ],
     "categoria": "buzos",
     "imagenes": [
-      "img/buzos/buzo-gris.jpg"  
+      "img/buzos/buzo-gris.jpg"
     ],
     "descripcion": "Buzo con liso con bolsillo por delante. Talle de la modelo: S."
-   } , 
-  
-
+  },
   {
     "id": 15,
     "nombre": "Buzo hombre salmon",
@@ -235,13 +224,11 @@
     ],
     "categoria": "buzos",
     "imagenes": [
-      "img/buzos/buzo-salmon.jpg" ,
-    "img/buzos/buzo-salmon-espalda.jpg"  
+      "img/buzos/buzo-salmon.jpg",
+      "img/buzos/buzo-salmon-espalda.jpg"
     ],
     "descripcion": "Buzo con liso con bolsillo por delante. Talle del  modelo: L."
-   } , 
-  
-
+  },
   {
     "id": 16,
     "nombre": "Buzo Evangelion beige",
@@ -251,13 +238,11 @@
     ],
     "categoria": "buzos",
     "imagenes": [
-      "img/buzos/buzo-evangelion.jpg" ,
-    "img/buzos/buzo-evangelion-espalda.jpg"  
+      "img/buzos/buzo-evangelion.jpg",
+      "img/buzos/buzo-rayado-costado.jpg"
     ],
     "descripcion": "Buzo con diseño en espalda. Talle del  modelo: M."
-   } , 
-  
-
+  },
   {
     "id": 16,
     "nombre": "Buzo rayado",
@@ -267,13 +252,11 @@
     ],
     "categoria": "buzos",
     "imagenes": [
-      "img/buzos/buzo-rayado.jpg" ,
-    "img/buzos/buzo-rayado-costado.jpg"  
+      "img/buzos/buzo-rayado.jpg",
+      "img/buzos/buzo-rayado-costado.jpg"
     ],
     "descripcion": "Buzo con liso con bolsillo por delante. Talle del  modelo: L."
-   } ,
- 
-
+  },
   {
     "id": 17,
     "nombre": "Chomba negra",
@@ -283,43 +266,40 @@
     ],
     "categoria": "remeras",
     "imagenes": [
-      "img/remeras/chomba-negra-frente.jpg" 
+      "img/remeras/chomba-negra-frente.jpg"
     ],
     "descripcion": "Chomba negra con detalles blancos. Talle del  modelo: 44."
-   } ,
-
-
+  },
   {
     "id": 18,
     "nombre": "Chomba bordo",
     "precio": 29000,
     "talles": [
-      "42", "44", "46"
+      "42",
+      "44",
+      "46"
     ],
     "categoria": "remeras",
     "imagenes": [
-      "img/remeras/chomba-bordo.jpg" ,
-     "img/remeras/chomba-borod-lado.jpg" 
+      "img/remeras/chomba-bordo.jpg",
+      "img/remeras/chomba-borod-lado.jpg"
     ],
     "descripcion": "Chomba lisa. Talle del modelo: 44.."
-   } ,
-
-
+  },
   {
     "id": 19,
     "nombre": "Chomba blanca",
     "precio": 29000,
     "talles": [
-      "44", "46"
+      "44",
+      "46"
     ],
     "categoria": "remeras",
     "imagenes": [
-      "img/remeras/chomba-blanca.jpg" 
+      "img/remeras/chomba-blanca.jpg"
     ],
     "descripcion": "Chomba con detalles negros. Talle del modelo: 44."
-   } ,
-
-
+  },
   {
     "id": 20,
     "nombre": "Campera verde",
@@ -329,12 +309,10 @@
     ],
     "categoria": "camperas",
     "imagenes": [
-      "img/camperas/campera-verde.jpg" 
+      "img/camperas/campera-verde.jpg"
     ],
     "descripcion": "Campera con bolsillos delanteros. Talle del modelo: S."
-   } ,
-
-
+  },
   {
     "id": 21,
     "nombre": "Campera roja",
@@ -344,12 +322,10 @@
     ],
     "categoria": "camperas",
     "imagenes": [
-      "img/camperas/campera-roja.jpg" 
+      "img/camperas/campera-roja.jpg"
     ],
     "descripcion": "Campera con bolsillos delanteros. Talle del modelo: M."
-   } ,
-
-
+  },
   {
     "id": 22,
     "nombre": "Campera marron",
@@ -359,12 +335,10 @@
     ],
     "categoria": "camperas",
     "imagenes": [
-      "img/camperas/campera-marron.jpg" 
+      "img/camperas/campera-marron.jpg"
     ],
     "descripcion": "Campera con bolsillos delanteros. Talle del modelo: M."
-   } ,
-
-
+  },
   {
     "id": 23,
     "nombre": "Campera gris",
@@ -375,12 +349,10 @@
     "categoria": "camperas",
     "imagenes": [
       "img/camperas/campera-gris.jpg",
-     "img/camperas/campera-gris-espalda.jpg" 
+      "img/camperas/campera-gris-espalda.jpg"
     ],
     "descripcion": "Campera con bolsillos delanteros. Talle del modelo: S."
-   } ,
-
-
+  },
   {
     "id": 24,
     "nombre": "Campera blanca",
@@ -390,22 +362,63 @@
     ],
     "categoria": "camperas",
     "imagenes": [
-      "img/camperas/campera-blanca.jpg" ,
-      "img/camperas/campera-blanca-espalda" 
+      "img/camperas/campera-blanca.jpg",
+      "img/camperas/campera-blanca-espalda"
     ],
     "descripcion": "Campera con bolsillos delanteros. Talle del modelo: XXL."
-   } 
+  },
+  {
+    "id": 25,
+    "nombre": "Manga larga algodon",
+    "precio": 29000,
+    "talles": [
+      "44"
+    ],
+    "categoria": "remeras",
+    "imagenes": [
+      "img/manga-larga-negra.jpg"
+    ],
+    "descripcion": "Remera manga larga negra lista, con cuello redondo. Talle del modelo: 44."
+  },
+  {
+    "id": 26,
+    "nombre": "Manga larga algodon",
+    "precio": 29000,
+    "talles": [
+      "44"
+    ],
+    "categoria": "remeras",
+    "imagenes": [
+      "img/remeras/manga-larga-gris.jpg"
+    ],
+    "descripcion": "Remera manga larga gris de algodon. El modelo usa talle 44."
+  },
+  {
+    "id": 27,
+    "nombre": "Manga larga algodon",
+    "precio": 29000,
+    "talles": [
+      "44"
+    ],
+    "categoria": "remeras",
+    "imagenes": [
+      "img/remeras/manga-larga-beige.jpg"
+    ],
+    "descripcion": "Remera manga larga beige lisa con cuello redondo. El modelo usa talle 44."
+  },
+  {
+    "id": 28,
+    "nombre": "Jean Hombre",
+    "precio": 30000,
+    "talles": [
+      "44",
+      "46"
+    ],
+    "categoria": "pantalones",
+    "imagenes": [
+      "img/pantalones/jean-hombre-negro.jpg",
+      "img/pantalones/jean-hombre-negro-espalda.jpg"
+    ],
+    "descripcion": "Jean negro rigido de hombre. El modelo usa talle 44."
+  }
 ]
-
-
-
-
-
-
-
-
-
-
-
-
-
