@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panel de productos — Maria Teresa Modas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin-body">
+
+  <header class="admin-header">
+    <h1>Panel de productos</h1>
+    <p>Maria Teresa Modas — cargá, editá y ordená el catálogo sin tocar código.</p>
+  </header>
+
+  <main class="admin-layout">
+
+    <!-- Columna izquierda: lista de productos actuales -->
+    <section class="admin-lista" aria-label="Productos cargados">
+      <div class="admin-lista-header">
+        <h2>Productos <span id="contadorProductos">(0)</span></h2>
+        <button class="btn btn-secundario" id="btnNuevo">+ Nuevo</button>
+      </div>
+      <ul class="lista-productos" id="listaProductos"></ul>
+    </section>
+
+    <!-- Columna derecha: formulario de edición -->
+    <section class="admin-form" aria-label="Editar producto">
+      <h2 id="formTitulo">Nuevo producto</h2>
+
+      <form id="formProducto">
+        <label>
+          Nombre
+          <input type="text" id="campoNombre" required placeholder="Ej: Jean wide leg gris">
+        </label>
+
+        <div class="fila">
+          <label>
+            Precio ($)
+            <input type="number" id="campoPrecio" required min="0" step="1" placeholder="30000">
+          </label>
+          <label>
+            Categoría
+            <input type="text" id="campoCategoria" required placeholder="pantalones, remeras, buzos...">
+          </label>
+        </div>
+
+        <label>
+          Talles disponibles
+          <span class="ayuda">separados por coma</span>
+          <input type="text" id="campoTalles" required placeholder="40, 42, 44, 46">
+        </label>
+
+        <label>
+          Stock por talle
+          <span class="ayuda">opcional — mismo orden que los talles, separado por coma. Si lo dejás vacío, se asume que hay stock de todos.</span>
+          <input type="text" id="campoStock" placeholder="3, 5, 0, 2">
+        </label>
+
+        <label>
+          Descripción
+          <textarea id="campoDescripcion" rows="3" placeholder="Tela, calce, detalles..."></textarea>
+        </label>
+
+        <label>
+          Fotos
+          <span class="ayuda">una ruta por línea, ej: img/pantalones/gris-frente.jpg — subí antes el archivo a esa carpeta</span>
+          <textarea id="campoImagenes" rows="3" placeholder="img/pantalones/gris-frente.jpg&#10;img/pantalones/gris-espalda.jpg"></textarea>
+        </label>
+
+        <div class="acciones-form">
+          <button type="submit" class="btn btn-primario" id="btnGuardar">Agregar producto</button>
+          <button type="button" class="btn btn-peligro oculto" id="btnEliminar">Eliminar este producto</button>
+          <button type="button" class="btn btn-secundario" id="btnCancelar">Cancelar edición</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <div class="admin-descarga">
+    <button class="btn btn-primario btn-grande" id="btnDescargar">Descargar productos.json</button>
+    <p class="ayuda">Reemplazá el archivo <code>data/productos.json</code> de tu proyecto por el que se descarga acá, y subí de nuevo con <code>git push</code>.</p>
+  </div>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>
