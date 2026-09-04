@@ -239,7 +239,7 @@
     "categoria": "buzos",
     "imagenes": [
       "img/buzos/buzo-evangelion.jpg",
-      "img/buzos/buzo-rayado-costado.jpg"
+      "img/buzos/buzo-evangelion-espalda.jpg"
     ],
     "descripcion": "Buzo con diseño en espalda. Talle del  modelo: M."
   },
@@ -498,7 +498,7 @@
     ],
     "categoria": "pantalones",
     "imagenes": [
-      "img/pantalones/bermuda-frente.jpg",
+      "img/pantalones/bermuda-fente.jpg",
       "img/pantalones/bermuda-espalda.jpg"
     ],
     "descripcion": "Bermuda clasica tono azul claro con desgastes.",
