@@ -420,5 +420,271 @@
       "img/pantalones/jean-hombre-negro-espalda.jpg"
     ],
     "descripcion": "Jean negro rigido de hombre. El modelo usa talle 44."
+  },
+  {
+    "id": 29,
+    "nombre": "Jean bordo hombre",
+    "precio": 25000,
+    "talles": [
+      "40"
+    ],
+    "categoria": "pantalones",
+    "imagenes": [
+      "img/pantalones/bordo-frente.jpg",
+      "img/pantalones/bordo-espalda.jpg"
+    ],
+    "descripcion": "Jean bordo rigido con bordado en el boslillo.",
+    "stock": [
+      1
+    ]
+  },
+  {
+    "id": 30,
+    "nombre": "Jean verde oliva",
+    "precio": 25000,
+    "talles": [
+      "40"
+    ],
+    "categoria": "pantalones",
+    "imagenes": [
+      "img/pantalones/verde-oliva.jpg",
+      "img/pantalones/verde-oliva-espalda.jpg"
+    ],
+    "descripcion": "Jean rigido verde oliva con bordado en el bolsillo.",
+    "stock": [
+      1
+    ]
+  },
+  {
+    "id": 31,
+    "nombre": "Jean gastado",
+    "precio": 25000,
+    "talles": [
+      "40"
+    ],
+    "categoria": "pantalones",
+    "imagenes": [
+      "img/pantalones/gastado-frente.jpg",
+      "img/pantalones/gastado-espalda.jpg"
+    ],
+    "descripcion": "Jean rigido azul con desgastes en los muslos.",
+    "stock": [
+      1
+    ]
+  },
+  {
+    "id": 32,
+    "nombre": "Jean azul",
+    "precio": 25000,
+    "talles": [
+      "40"
+    ],
+    "categoria": "pa",
+    "imagenes": [
+      "img/pantalones/azul-rigido.jpg",
+      "img/pantalones/azul-rigido-espalda.jpg"
+    ],
+    "descripcion": "Jean azul clasico de hombre con bordado en el bolsillo.",
+    "stock": [
+      1
+    ]
+  },
+  {
+    "id": 33,
+    "nombre": "Bermuda",
+    "precio": 25000,
+    "talles": [
+      "40"
+    ],
+    "categoria": "pantalones",
+    "imagenes": [
+      "img/pantalones/bermuda-frente.jpg",
+      "img/pantalones/bermuda-espalda.jpg"
+    ],
+    "descripcion": "Bermuda clasica tono azul claro con desgastes.",
+    "stock": [
+      1
+    ]
+  },
+  {
+    "id": 34,
+    "nombre": "Calza mujer",
+    "precio": 25000,
+    "talles": [
+      "M"
+    ],
+    "categoria": "pantalones",
+    "imagenes": [
+      "img/pantalones/calza-negra-frente.jpg",
+      "img/pantalones/calza-negra.jpg"
+    ],
+    "descripcion": "Calza de algodon negra con cierre dorado en el tobillo.",
+    "stock": [
+      1
+    ]
+  },
+  {
+    "id": 35,
+    "nombre": "Calza mujer",
+    "precio": 25000,
+    "talles": [
+      "M"
+    ],
+    "categoria": "pantalones",
+    "imagenes": [
+      "img/pantalones/calza-azul.jpg",
+      "img/pantalones/calza-azul-espalda.jpg"
+    ],
+    "descripcion": "Calza de algodon azul con botones dorados en el tobillo.",
+    "stock": [
+      1
+    ]
+  },
+  {
+    "id": 36,
+    "nombre": "Jean clasico",
+    "precio": 25000,
+    "talles": [
+      "40"
+    ],
+    "categoria": "pantalones",
+    "imagenes": [
+      "img/pantalones/azul-clasico.jpg",
+      "img/pantalones/azul-clasico-detras.jpg"
+    ],
+    "descripcion": "Jean rigido azul clasico de hombre.",
+    "stock": [
+      1
+    ]
+  },
+  {
+    "id": 37,
+    "nombre": "Calza pescadora",
+    "precio": 18000,
+    "talles": [
+      "M"
+    ],
+    "categoria": "pantalones",
+    "imagenes": [
+      "img/pantalones/calza-arcoiris.jpg"
+    ],
+    "descripcion": "Calza pescadora con franja arcoiris de ambos lados.",
+    "stock": [
+      1
+    ]
+  },
+  {
+    "id": 38,
+    "nombre": "Camisa niños",
+    "precio": 15000,
+    "talles": [
+      "16"
+    ],
+    "categoria": "Camisas",
+    "imagenes": [
+      "img/camisas/camisa-rosa-niños.jpg"
+    ],
+    "descripcion": "Camisa entallada de algodon, rosa con rayas blancas.",
+    "stock": [
+      1
+    ]
+  },
+  {
+    "id": 39,
+    "nombre": "Camisa niños",
+    "precio": 15000,
+    "talles": [
+      "16"
+    ],
+    "categoria": "camisas",
+    "imagenes": [
+      "img/camisas/camisa-azul-niños.jpg"
+    ],
+    "descripcion": "Camisa cuadrille azul para niños.",
+    "stock": [
+      1
+    ]
+  },
+  {
+    "id": 40,
+    "nombre": "Manga larga niños",
+    "precio": 15000,
+    "talles": [
+      "16"
+    ],
+    "categoria": "remeras",
+    "imagenes": [
+      "/img/remeras/rosa-floreada-niños.jpg",
+      "img/remeras/rosa-floreada-niños-espalda.jpg"
+    ],
+    "descripcion": "Remera para para niños con espalda floreada.",
+    "stock": [
+      1
+    ]
+  },
+  {
+    "id": 41,
+    "nombre": "Manga larga niño",
+    "precio": 15000,
+    "talles": [
+      "16"
+    ],
+    "categoria": "remeras",
+    "imagenes": [
+      "img/remeras/azul-floreada-niños.jpg",
+      "img/remeras/azul-floreada-niños-detras.jpg"
+    ],
+    "descripcion": "Remera manga larga azul con espalda floreada.",
+    "stock": [
+      1
+    ]
+  },
+  {
+    "id": 42,
+    "nombre": "Manga larga niños",
+    "precio": 15000,
+    "talles": [
+      "16"
+    ],
+    "categoria": "remeras",
+    "imagenes": [
+      "img/remeras/azul-cuello-v.jpg"
+    ],
+    "descripcion": "Remera manga larga con corte del cuello en v",
+    "stock": [
+      1
+    ]
+  },
+  {
+    "id": 43,
+    "nombre": "Remera New York niños",
+    "precio": 1500,
+    "talles": [
+      "16"
+    ],
+    "categoria": "remeras",
+    "imagenes": [
+      "img/remeras/azul-ny.jpg"
+    ],
+    "descripcion": "Remera manga corta  con brillos en el frente.",
+    "stock": [
+      1
+    ]
+  },
+  {
+    "id": 44,
+    "nombre": "Remera verde niños",
+    "precio": 15000,
+    "talles": [
+      "S"
+    ],
+    "categoria": "remeras",
+    "imagenes": [
+      "img/remeras/verde-niños.jpg"
+    ],
+    "descripcion": "Remera verde claro con rodtro en blanco y negro, manga corte chino.",
+    "stock": [
+      1
+    ]
   }
 ]
