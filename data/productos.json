@@ -479,7 +479,7 @@
     "talles": [
       "40"
     ],
-    "categoria": "pa",
+    "categoria": "pantalones",
     "imagenes": [
       "img/pantalones/azul-rigido.jpg",
       "img/pantalones/azul-rigido-espalda.jpg"
@@ -580,7 +580,7 @@
     "talles": [
       "16"
     ],
-    "categoria": "Camisas",
+    "categoria": "camisas",
     "imagenes": [
       "img/camisas/camisa-rosa-niños.jpg"
     ],
