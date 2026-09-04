@@ -320,8 +320,8 @@
     ],
     "categoria": "camperas",
     "imagenes": [
-      "img/camperas/campera-gris.jpg",
-      "img/camperas/campera-gris-espalda.jpg"
+      "img/camperas/campera-gris.jpg"
+    
     ],
     "descripcion": "Campera con bolsillos delanteros. Talle del modelo: S."
   },
@@ -335,7 +335,7 @@
     "categoria": "camperas",
     "imagenes": [
       "img/camperas/campera-blanca.jpg",
-      "img/camperas/campera-blanca-espalda"
+      "img/camperas/campera-blanca-espalda.jpg"
     ],
     "descripcion": "Campera con bolsillos delanteros. Talle del modelo: XXL."
   },
@@ -587,7 +587,7 @@
     "categoria": "remeras",
     "imagenes": [
       "img/remeras/rosa-floreada-niños.jpg",
-      "img/remeras/rosa-floreada-niños-espalda.jpg"
+      "img/remeras/rosa-floreada-espalda-niños.jpg"
     ],
     "descripcion": "Remera para para niños con espalda floreada.",
     "stock": [
