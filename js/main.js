@@ -35,11 +35,23 @@ async function cargarProductos() {
 function armarCategorias(lista) {
   const categorias = ['todas', ...new Set(lista.map(p => p.categoria))];
 
-  categoriasEl.innerHTML = categorias.map(cat => `
-    <button class="tag-btn ${cat === categoriaActiva ? 'active' : ''}" data-categoria="${cat}">
-      ${cat}
-    </button>
-  `).join('');
+  // Cada categoría muestra en el círculo la foto de su primer producto
+  const fotoDe = (cat) => {
+    const prod = lista.find(p => p.categoria === cat);
+    return prod ? getImagenes(prod)[0] : null;
+  };
+
+  categoriasEl.innerHTML = categorias.map(cat => {
+    const foto = cat === 'todas' ? null : fotoDe(cat);
+    return `
+      <button class="tag-btn ${cat === categoriaActiva ? 'active' : ''}" data-categoria="${cat}">
+        <span class="tag-circulo">
+          ${foto ? `<img src="${foto}" alt="" loading="lazy" onerror="this.src='img/placeholder.png'">` : '<span>✿</span>'}
+        </span>
+        ${cat}
+      </button>
+    `;
+  }).join('');
 
   categoriasEl.querySelectorAll('.tag-btn').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -105,6 +117,30 @@ function tallesHTML(p) {
   }).join('');
 }
 
+// Precio actual, con el anterior tachado si el producto está en oferta
+function precioHTML(p) {
+  const anterior = Number(p.precioAnterior) > p.precio
+    ? `<s class="precio-anterior">$ ${Number(p.precioAnterior).toLocaleString('es-AR')}</s>`
+    : '';
+  return `${anterior}$ ${p.precio.toLocaleString('es-AR')}`;
+}
+
+// Etiqueta sobre la foto: la que se cargó en el panel, o "-X%" si tiene precio anterior
+function etiquetaHTML(p) {
+  if (p.etiqueta) return `<span class="badge">${p.etiqueta}</span>`;
+  if (Number(p.precioAnterior) > p.precio) {
+    const off = Math.round(100 - (p.precio / p.precioAnterior) * 100);
+    return `<span class="badge oferta">-${off}%</span>`;
+  }
+  return '';
+}
+
+function linkWhatsapp(p) {
+  return `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(
+    `¡Hola! Quería consultar por "${p.nombre}" ($ ${p.precio.toLocaleString('es-AR')}) que vi en la web.`
+  )}`;
+}
+
 function renderProductos(lista) {
   if (!lista.length) {
     catalogoEl.innerHTML = '<p class="status">No hay productos en esta sección todavía.</p>';
@@ -113,12 +149,16 @@ function renderProductos(lista) {
 
   catalogoEl.innerHTML = lista.map(p => `
     <article class="producto" data-id="${p.id}">
-      <div class="producto-img">${galeriaHTML(getImagenes(p), p.nombre)}</div>
+      <div class="producto-img">
+        ${etiquetaHTML(p)}
+        ${galeriaHTML(getImagenes(p), p.nombre)}
+      </div>
       <div class="producto-info">
         <h3 class="producto-nombre">${p.nombre}</h3>
-        <span class="producto-precio">$ ${p.precio.toLocaleString('es-AR')}</span>
-        <div class="producto-talles">
-          ${tallesHTML(p)}
+        <span class="producto-precio">${precioHTML(p)}</span>
+        <div class="producto-talles">${tallesHTML(p)}</div>
+        <div class="producto-consultar">
+          <a href="${linkWhatsapp(p)}" target="_blank" rel="noopener">Consultar por WhatsApp</a>
         </div>
       </div>
     </article>
@@ -130,7 +170,9 @@ function renderProductos(lista) {
     const imgContainer = card.querySelector('.producto-img');
     activarGaleria(imgContainer, getImagenes(producto));
 
-    // Click en cualquier parte de la tarjeta (menos flechas/puntos) abre el detalle
+    card.querySelector('.producto-consultar a').addEventListener('click', (e) => e.stopPropagation());
+
+    // Click en cualquier parte de la tarjeta (menos flechas/puntos/botón) abre el detalle
     card.addEventListener('click', () => {
       location.hash = `producto-${id}`;
     });
@@ -149,11 +191,9 @@ const detalleWhatsapp = document.getElementById('detalleWhatsapp');
 
 function abrirDetalle(producto) {
   detalleNombre.textContent = producto.nombre;
-  detallePrecio.textContent = `$ ${producto.precio.toLocaleString('es-AR')}`;
+  detallePrecio.innerHTML = precioHTML(producto);
   detalleTalles.innerHTML = tallesHTML(producto);
-  detalleWhatsapp.href = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(
-    `¡Hola! Quería consultar por "${producto.nombre}" ($ ${producto.precio.toLocaleString('es-AR')}) que vi en la web.`
-  )}`;
+  detalleWhatsapp.href = linkWhatsapp(producto);
   detalleDescripcion.textContent = producto.descripcion || '';
 
   detalleGaleria.innerHTML = galeriaHTML(getImagenes(producto), producto.nombre);

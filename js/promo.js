@@ -7,6 +7,7 @@ const PROMO = {
   hasta: '2026-10-18',            
   demoraMs: 1500,                  // espera antes de abrirse
 
+  barra: '💐 Día de la Madre: 10% OFF en efectivo o transferencia',  // texto de la barra de arriba
   etiqueta: 'Día de la Madre',
   titulo: 'Regalale algo lindo a mamá',
   subtitulo: 'Promos válidas hasta el domingo 18 de octubre',
@@ -27,6 +28,9 @@ const PROMO = {
   const desde = new Date(`${PROMO.desde}T00:00:00`);
   const hasta = new Date(`${PROMO.hasta}T23:59:59`);
   if (hoy < desde || hoy > hasta) return;
+
+  const barra = document.getElementById('barraAnuncio');
+  if (barra && PROMO.barra) barra.textContent = PROMO.barra;
 
   const claveCierre = `promo-cerrada-${PROMO.id}`;
   const hoyTexto = hoy.toISOString().slice(0, 10);
