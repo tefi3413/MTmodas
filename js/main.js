@@ -1,7 +1,4 @@
 // ===== Maria Teresa Modas — catálogo =====
-// Este archivo lee data/productos.json, dibuja las tarjetas, arma los
-// filtros por categoría, y abre un panel de detalle al hacer click en
-// un producto (fotos grandes + descripción, estilo Mercado Libre).
 
 const catalogoEl = document.getElementById('catalogo');
 const categoriasEl = document.getElementById('categorias');
