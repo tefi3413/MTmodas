@@ -9,6 +9,7 @@ const statusEl = document.getElementById('status');
 
 let productos = [];
 let categoriaActiva = 'todas';
+const WHATSAPP = '542995185092';
 
 async function cargarProductos() {
   try {
@@ -96,6 +97,14 @@ function activarGaleria(container, imgs) {
   return { mostrar };
 }
 
+// Talles: los que tienen stock 0 se muestran tachados
+function tallesHTML(p) {
+  return p.talles.map((t, i) => {
+    const agotado = Array.isArray(p.stock) && Number(p.stock[i]) <= 0;
+    return `<span class="talle ${agotado ? 'agotado' : ''}" ${agotado ? 'title="Sin stock"' : ''}>${t}</span>`;
+  }).join('');
+}
+
 function renderProductos(lista) {
   if (!lista.length) {
     catalogoEl.innerHTML = '<p class="status">No hay productos en esta sección todavía.</p>';
@@ -109,7 +118,7 @@ function renderProductos(lista) {
         <h3 class="producto-nombre">${p.nombre}</h3>
         <span class="producto-precio">$ ${p.precio.toLocaleString('es-AR')}</span>
         <div class="producto-talles">
-          ${p.talles.map(t => `<span class="talle">${t}</span>`).join('')}
+          ${tallesHTML(p)}
         </div>
       </div>
     </article>
@@ -136,11 +145,15 @@ const detallePrecio = document.getElementById('detallePrecio');
 const detalleTalles = document.getElementById('detalleTalles');
 const detalleDescripcion = document.getElementById('detalleDescripcion');
 const detalleCerrar = document.getElementById('detalleCerrar');
+const detalleWhatsapp = document.getElementById('detalleWhatsapp');
 
 function abrirDetalle(producto) {
   detalleNombre.textContent = producto.nombre;
   detallePrecio.textContent = `$ ${producto.precio.toLocaleString('es-AR')}`;
-  detalleTalles.innerHTML = producto.talles.map(t => `<span class="talle">${t}</span>`).join('');
+  detalleTalles.innerHTML = tallesHTML(producto);
+  detalleWhatsapp.href = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(
+    `¡Hola! Quería consultar por "${producto.nombre}" ($ ${producto.precio.toLocaleString('es-AR')}) que vi en la web.`
+  )}`;
   detalleDescripcion.textContent = producto.descripcion || '';
 
   detalleGaleria.innerHTML = galeriaHTML(getImagenes(producto), producto.nombre);

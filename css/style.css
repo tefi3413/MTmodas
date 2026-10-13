@@ -465,3 +465,207 @@ body{
 @media (max-width: 380px){
   .catalogo{ grid-template-columns: 1fr; }
 }
+
+/* ===== Talles sin stock ===== */
+.talle.agotado{
+  border-color: var(--line);
+  color: #b3a998;
+  text-decoration: line-through;
+}
+
+/* ===== Botón "Consultar por WhatsApp" en el detalle ===== */
+.detalle-whatsapp{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--wine);
+  color: var(--white);
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.8rem 1.2rem;
+  border-radius: var(--radius);
+  transition: background 0.15s ease;
+}
+.detalle-whatsapp:hover{ background: var(--wine-deep); }
+.detalle-ayuda{
+  font-size: 0.78rem;
+  opacity: 0.7;
+  margin: -0.4rem 0 0;
+}
+
+/* ===== Botón flotante de WhatsApp ===== */
+.whatsapp-flotante{
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 90;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25D366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  transition: transform 0.15s ease;
+}
+.whatsapp-flotante:hover{ transform: scale(1.07); }
+.whatsapp-flotante svg{ width: 30px; height: 30px; fill: #fff; }
+
+/* ===== Pop-up de promociones ===== */
+.promo-overlay{
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(43, 36, 32, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+.promo-overlay.visible{ opacity: 1; }
+.promo-panel{
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
+  background: var(--white);
+  border-radius: 12px;
+  border-top: 6px solid var(--wine);
+  padding: 2rem 1.5rem 1.4rem;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(43, 24, 12, 0.35);
+  transform: translateY(16px) scale(0.97);
+  transition: transform 0.25s ease;
+}
+.promo-overlay.visible .promo-panel{ transform: none; }
+.promo-cerrar{
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 50%;
+  background: var(--ivory-deep);
+  color: var(--ink);
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.promo-cerrar:hover{ background: var(--line); }
+.promo-flores{
+  color: var(--copper);
+  letter-spacing: 0.5em;
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+.promo-etiqueta{
+  display: inline-block;
+  font-family: var(--font-tag);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--wine);
+  border: 1px solid var(--wine);
+  border-radius: 999px;
+  padding: 0.2rem 0.75rem;
+}
+.promo-panel h2{
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 1.15;
+  margin: 0.8rem 0 0.3rem;
+  color: var(--wine-deep);
+}
+.promo-subtitulo{
+  margin: 0 0 1.1rem;
+  font-size: 0.88rem;
+  opacity: 0.75;
+}
+.promo-beneficios{
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+  text-align: left;
+}
+.promo-beneficios li{
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #f2d8d0;
+  border-radius: var(--radius);
+  padding: 0.6rem 0.8rem;
+  font-size: 0.85rem;
+}
+.promo-beneficios strong{
+  flex: 0 0 auto;
+  min-width: 6.2rem;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--wine-deep);
+}
+.promo-codigo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  width: 100%;
+  margin-bottom: 0.9rem;
+  padding: 0.55rem;
+  background: transparent;
+  border: 1.5px dashed var(--copper-deep);
+  border-radius: var(--radius);
+  font-family: var(--font-tag);
+  color: var(--ink);
+  cursor: pointer;
+}
+.promo-codigo span{ font-size: 0.72rem; text-transform: uppercase; opacity: 0.7; }
+.promo-codigo strong{ font-size: 1.05rem; letter-spacing: 0.1em; color: var(--wine); }
+.promo-codigo em{ font-style: normal; font-size: 0.7rem; color: var(--copper-deep); }
+.promo-boton{
+  display: block;
+  background: var(--wine);
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius);
+  transition: background 0.15s ease;
+}
+.promo-boton:hover{ background: var(--wine-deep); }
+.promo-seguir{
+  margin-top: 0.6rem;
+  background: none;
+  border: none;
+  color: var(--ink);
+  opacity: 0.65;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.promo-legal{
+  margin: 0.7rem 0 0;
+  font-size: 0.68rem;
+  opacity: 0.5;
+}
+.promo-cerrar:focus-visible,
+.promo-boton:focus-visible,
+.promo-codigo:focus-visible,
+.promo-seguir:focus-visible{
+  outline: 2px solid var(--wine);
+  outline-offset: 2px;
+}
+@media (prefers-reduced-motion: reduce){
+  .promo-overlay, .promo-panel{ transition: none; }
+}
