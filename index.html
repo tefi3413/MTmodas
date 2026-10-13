@@ -41,21 +41,21 @@
 }
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,500&family=Dancing+Script:wght@600&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<!-- Barra superior de anuncios (Top Bar) -->
+  <!-- Barra superior: mientras haya una promo activa, js/promo.js reemplaza este texto -->
   <div class="top-announcement-bar">
-    <p>💐 Promos Día de la Madre · 🚚 Envíos $3.000 en Cipolletti y zonas cercanas</p>
+    <p id="barraAnuncio">🚚 Envíos a domicilio $3.000 en Cipolletti y zonas cercanas</p>
   </div>
 
   <header class="site-header">
     <div class="header-inner">
-      <img src="img/logo-mt.png" alt="María Teresa Modas" class="logo" onerror="this.style.display='none'">
+      <img src="img/logo-mt.png" alt="" class="logo" onerror="this.style.display='none'">
       <div class="brand">
-        <h1>Maria Teresa Modas</h1>
-        <p class="tagline"></p>
+        <span class="brand-script">emprendimiento familiar</span>
+        <h1>María Teresa Modas</h1>
       </div>
       <nav class="contacto-bar" aria-label="Contacto">
         <a href="https://wa.me/542995185092" target="_blank" rel="noopener" class="contacto-link">
@@ -71,17 +71,31 @@
     </div>
   </header>
 
-  
-  <section class="info-bar">
-  <div class="info-item">
-    <span>💳</span>
-    <p><strong>Medios de pago:</strong> Transferencia, Mercado Pago y Efectivo</p>
-  </div>
-</section>
+  <!-- Portada: para cambiar la foto, reemplazá la ruta en style="background-image: ..." -->
+  <section class="hero">
+    <div class="hero-txt">
+      <span class="chip">✿ Nueva temporada</span>
+      <h2>Ropa linda,<br><em>precios de amiga</em></h2>
+      <p>Jeans, buzos, remeras y camperas para vos y toda la familia. Envíos en Cipolletti y zonas cercanas.</p>
+      <div class="hero-botones">
+        <a href="#catalogo-titulo" class="btn-principal">Ver catálogo →</a>
+        <a href="https://wa.me/542995185092" target="_blank" rel="noopener" class="btn-secundario-hero">Escribinos</a>
+      </div>
+    </div>
+    <div class="hero-img" role="img" aria-label="Remera floral de María Teresa Modas" style="background-image: url('img/remeras/floral-corazon.jpg')"></div>
+  </section>
 
-<!-- Las categorias se van sumando a medida que haya mas productos en el json -->
-<nav class="tag-rack" id="categorias" aria-label="Secciones del catálogo"></nav>
+  <section class="info-bar" aria-label="Información de compra">
+    <div class="info-item"><span>🚚</span><p>Envíos $3.000 en Cipolletti</p></div>
+    <div class="info-item"><span>💳</span><p>Transferencia, Mercado Pago y efectivo</p></div>
+    <div class="info-item"><span>💬</span><p>Te asesoramos por WhatsApp</p></div>
+  </section>
 
+  <h2 class="seccion-titulo" id="catalogo-titulo">Nuestro catálogo</h2>
+  <p class="seccion-script">elegido con amor</p>
+
+  <!-- Las categorías se arman solas a partir de productos.json -->
+  <nav class="tag-rack" id="categorias" aria-label="Secciones del catálogo"></nav>
 
   <main>
     <p class="status" id="status">Cargando catálogo…</p>
@@ -105,12 +119,14 @@
   </div>
 
   <footer class="site-footer">
-    <p>Maria Teresa Modas — Cipolletti, Río Negro.</p>
-    <nav class="contacto-bar contacto-bar-footer" aria-label="Contacto">
-      <a href="https://wa.me/542995185092" target="_blank" rel="noopener" class="contacto-link">☎ +54 2995185092</a>
+    <p class="footer-marca">María Teresa Modas</p>
+    <p class="footer-script">gracias por elegirnos</p>
+    <nav class="contacto-bar" aria-label="Contacto">
+      <a href="https://wa.me/542995185092" target="_blank" rel="noopener" class="contacto-link">☎ +54 299 518-5092</a>
       <a href="https://www.instagram.com/mt.modascipo" target="_blank" rel="noopener" class="contacto-link">◎ Instagram</a>
       <a href="https://www.facebook.com/profile.php?id=61593674805982" target="_blank" rel="noopener" class="contacto-link">f Facebook</a>
     </nav>
+    <p class="footer-datos">Cipolletti, Río Negro · Envíos a domicilio</p>
   </footer>
 
   <a class="whatsapp-flotante" href="https://wa.me/542995185092?text=%C2%A1Hola!%20Quer%C3%ADa%20hacer%20una%20consulta" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
