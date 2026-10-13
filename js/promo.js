@@ -6,6 +6,7 @@ const PROMO = {
   desde: '2026-10-01',
   hasta: '2026-10-18',            
   demoraMs: 1500,                  // espera antes de abrirse
+  mostrarSiempre: true,            // true = aparece cada vez que se abre la página; false = una vez por día
 
   barra: '💐 Día de la Madre: 10% OFF en efectivo o transferencia',  // texto de la barra de arriba
   etiqueta: 'Día de la Madre',
@@ -35,7 +36,7 @@ const PROMO = {
   const claveCierre = `promo-cerrada-${PROMO.id}`;
   const hoyTexto = hoy.toISOString().slice(0, 10);
   try {
-    if (localStorage.getItem(claveCierre) === hoyTexto) return;
+    if (!PROMO.mostrarSiempre && localStorage.getItem(claveCierre) === hoyTexto) return;
   } catch (e) { /* sin localStorage: se muestra igual */ }
 
   const linkWhatsapp = `https://wa.me/${PROMO.whatsapp}?text=${encodeURIComponent(
