@@ -1,14 +1,10 @@
 // ===== Pop-up de promociones — Maria Teresa Modas =====
-// Para cambiar la promo, editá solamente el objeto PROMO de abajo.
-// - Se muestra sola desde "desde" hasta "hasta" (fechas incluidas).
-// - Después de cerrarla, no vuelve a aparecer hasta el día siguiente.
-// - Para apagarla antes de tiempo: activa: false
 
 const PROMO = {
   activa: true,
-  id: 'dia-madre-2026',            // cambialo en cada promo nueva para que vuelva a mostrarse
+  id: 'dia-madre-2026',           
   desde: '2026-10-01',
-  hasta: '2026-10-18',             // Día de la Madre en Argentina: 3er domingo de octubre
+  hasta: '2026-10-18',            
   demoraMs: 1500,                  // espera antes de abrirse
 
   etiqueta: 'Día de la Madre',
@@ -17,7 +13,7 @@ const PROMO = {
   beneficios: [
     { destacado: '10% OFF', texto: 'pagando en efectivo o transferencia' },
   ],
-  codigo: '',              // dejalo vacío ('') si no querés mostrar código
+  codigo: '',              
   botonTexto: 'Quiero mi descuento',
   whatsapp: '542995185092',
   mensajeWhatsapp: '¡Hola! Vi la promo del Día de la Madre en la web y quiero consultar 💐',
@@ -92,7 +88,6 @@ const PROMO = {
   }
 
   setTimeout(() => {
-    // Si el cliente ya está mirando un producto, no lo interrumpimos
     const detalle = document.getElementById('detalleOverlay');
     if (detalle && !detalle.hidden) return;
     document.body.appendChild(overlay);
