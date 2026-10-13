@@ -16,10 +16,8 @@ const PROMO = {
   subtitulo: 'Promos válidas hasta el domingo 18 de octubre',
   beneficios: [
     { destacado: '10% OFF', texto: 'pagando en efectivo o transferencia' },
-    { destacado: '2da prenda', texto: '15% OFF en la segunda unidad' },
-    { destacado: 'Envío gratis', texto: 'en compras desde $60.000 en Cipolletti' },
   ],
-  codigo: 'MAMA2026',              // dejalo vacío ('') si no querés mostrar código
+  codigo: '',              // dejalo vacío ('') si no querés mostrar código
   botonTexto: 'Quiero mi descuento',
   whatsapp: '542995185092',
   mensajeWhatsapp: '¡Hola! Vi la promo del Día de la Madre en la web y quiero consultar 💐',
