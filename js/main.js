@@ -29,40 +29,57 @@ async function cargarProductos() {
   }
 }
 
+// Un producto está en oferta si tiene precio anterior mayor o la etiqueta "Oferta"
+function enOferta(p) {
+  return Number(p.precioAnterior) > p.precio || /oferta/i.test(p.etiqueta || '');
+}
+
+function filtrarPor(cat) {
+  if (cat === 'todas') return productos;
+  if (cat === 'ofertas') return productos.filter(enOferta);
+  return productos.filter(p => p.categoria === cat);
+}
+
 function armarCategorias(lista) {
-  const categorias = ['todas', ...new Set(lista.map(p => p.categoria))];
+  const hayOfertas = lista.some(enOferta);
+  const categorias = ['todas', ...(hayOfertas ? ['ofertas'] : []), ...new Set(lista.map(p => p.categoria))];
 
   // Cada categoría muestra en el círculo la foto de su primer producto
   const fotoDe = (cat) => {
-    const prod = lista.find(p => p.categoria === cat);
+    const prod = cat === 'ofertas' ? lista.find(enOferta) : lista.find(p => p.categoria === cat);
     return prod ? getImagenes(prod)[0] : null;
   };
 
   categoriasEl.innerHTML = categorias.map(cat => {
     const foto = cat === 'todas' ? null : fotoDe(cat);
     return `
-      <button class="tag-btn ${cat === categoriaActiva ? 'active' : ''}" data-categoria="${cat}">
+      <button class="tag-btn ${cat === 'ofertas' ? 'tag-ofertas' : ''} ${cat === categoriaActiva ? 'active' : ''}" data-categoria="${cat}">
         <span class="tag-circulo">
           ${foto ? `<img src="${foto}" alt="" loading="lazy" onerror="this.src='img/placeholder.png'">` : '<span>✿</span>'}
         </span>
-        ${cat}
+        ${cat === 'ofertas' ? 'Ofertas 🔥' : cat}
       </button>
     `;
   }).join('');
 
   categoriasEl.querySelectorAll('.tag-btn').forEach(btn => {
     btn.addEventListener('click', () => {
-      categoriaActiva = btn.dataset.categoria;
-      categoriasEl.querySelectorAll('.tag-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      const filtrados = categoriaActiva === 'todas'
-        ? productos
-        : productos.filter(p => p.categoria === categoriaActiva);
-
-      renderProductos(filtrados);
+      // Si se llegó por el link #ofertas y se elige otra sección, se limpia el link
+      if (location.hash === '#ofertas' && btn.dataset.categoria !== 'ofertas') {
+        history.replaceState(null, '', location.pathname + location.search);
+      }
+      seleccionarCategoria(btn.dataset.categoria);
     });
   });
+}
+
+function seleccionarCategoria(cat) {
+  if (!categoriasEl.querySelector(`[data-categoria="${cat}"]`)) cat = 'todas';
+  categoriaActiva = cat;
+  categoriasEl.querySelectorAll('.tag-btn').forEach(b => {
+    b.classList.toggle('active', b.dataset.categoria === cat);
+  });
+  renderProductos(filtrarPor(cat));
 }
 
 function getImagenes(p) {
@@ -213,6 +230,18 @@ function revisarHashInicial() {
 }
 
 function aplicarHash() {
+  // mtmodas.netlify.app/#ofertas abre el catálogo filtrado en las ofertas
+  // (lo usa el botón del pop-up y se puede compartir en Instagram/WhatsApp)
+  if (location.hash === '#ofertas') {
+    detalleOverlay.hidden = true;
+    document.body.style.overflow = '';
+    if (categoriaActiva !== 'ofertas') {
+      seleccionarCategoria('ofertas');
+      document.getElementById('catalogo-titulo').scrollIntoView({ behavior: 'smooth' });
+    }
+    return;
+  }
+
   const match = location.hash.match(/^#producto-(.+)$/);
   if (!match) {
     detalleOverlay.hidden = true;
