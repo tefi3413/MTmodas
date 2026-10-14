@@ -6,6 +6,7 @@ const statusEl = document.getElementById('status');
 
 let productos = [];
 let categoriaActiva = 'todas';
+let busqueda = '';
 const WHATSAPP = '542995185092';
 
 async function cargarProductos() {
@@ -23,7 +24,9 @@ async function cargarProductos() {
     armarCategorias(productos);
     renderProductos(productos);
     revisarHashInicial();
+    document.dispatchEvent(new CustomEvent('productos-listos'));
   } catch (err) {
+    document.dispatchEvent(new CustomEvent('productos-error'));
     statusEl.textContent = 'No se pudo cargar el catálogo. Revisá que estés sirviendo el sitio con un servidor local (no abriendo el HTML directo).';
     console.error(err);
   }
@@ -64,8 +67,8 @@ function armarCategorias(lista) {
 
   categoriasEl.querySelectorAll('.tag-btn').forEach(btn => {
     btn.addEventListener('click', () => {
-      // Si se llegó por el link #ofertas y se elige otra sección, se limpia el link
-      if (location.hash === '#ofertas' && btn.dataset.categoria !== 'ofertas') {
+      // Si se llegó por un link de sección (#ofertas, #categoria-...) y se elige otra, se limpia el link
+      if (hashDeSeccion() && hashDeSeccion() !== btn.dataset.categoria) {
         history.replaceState(null, '', location.pathname + location.search);
       }
       seleccionarCategoria(btn.dataset.categoria);
@@ -79,7 +82,41 @@ function seleccionarCategoria(cat) {
   categoriasEl.querySelectorAll('.tag-btn').forEach(b => {
     b.classList.toggle('active', b.dataset.categoria === cat);
   });
-  renderProductos(filtrarPor(cat));
+  renderActual();
+}
+
+// ===== Buscador =====
+const normalizar = (texto) => String(texto || '')
+  .toLowerCase()
+  .normalize('NFD')
+  .replace(/[\u0300-\u036f]/g, '');
+
+function coincideBusqueda(p) {
+  if (!busqueda) return true;
+  const texto = normalizar(`${p.nombre} ${p.categoria} ${p.descripcion || ''} ${p.etiqueta || ''}`);
+  return normalizar(busqueda).split(/\s+/).filter(Boolean).every(palabra => texto.includes(palabra));
+}
+
+function renderActual() {
+  const lista = filtrarPor(categoriaActiva).filter(coincideBusqueda);
+  if (!lista.length && busqueda) {
+    const consulta = encodeURIComponent(`¡Hola! Estoy buscando "${busqueda}", ¿tienen?`);
+    catalogoEl.innerHTML = `
+      <p class="status sin-resultados">
+        No encontramos "${busqueda.replace(/</g, '&lt;')}"${categoriaActiva !== 'todas' ? ' en esta sección' : ''}.
+        <a href="https://wa.me/${WHATSAPP}?text=${consulta}" target="_blank" rel="noopener">Preguntanos por WhatsApp</a>
+      </p>`;
+    return;
+  }
+  renderProductos(lista);
+}
+
+const buscadorEl = document.getElementById('buscador');
+if (buscadorEl) {
+  buscadorEl.addEventListener('input', () => {
+    busqueda = buscadorEl.value.trim();
+    renderActual();
+  });
 }
 
 function getImagenes(p) {
@@ -229,16 +266,43 @@ function revisarHashInicial() {
   aplicarHash();
 }
 
+let hashAnterior = '';
+
+function irAlCatalogo() {
+  document.getElementById('catalogo-titulo').scrollIntoView({ behavior: 'smooth' });
+}
+
+// Si se toca un link a la sección en la que ya se está, el navegador no avisa
+// (el link no cambia), así que se baja al catálogo a mano
+document.addEventListener('click', (e) => {
+  const link = e.target.closest('a[href^="#ofertas"], a[href^="#categoria-"]');
+  if (link && link.getAttribute('href') === location.hash) {
+    e.preventDefault();
+    if (categoriaActiva !== hashDeSeccion()) seleccionarCategoria(hashDeSeccion());
+    irAlCatalogo();
+  }
+});
+
+// Links de sección: #ofertas o #categoria-NOMBRE (ej: #categoria-conjuntos)
+function hashDeSeccion() {
+  if (location.hash === '#ofertas') return 'ofertas';
+  const m = location.hash.match(/^#categoria-(.+)$/);
+  return m ? decodeURIComponent(m[1]).toLowerCase() : null;
+}
+
 function aplicarHash() {
-  // mtmodas.netlify.app/#ofertas abre el catálogo filtrado en las ofertas
-  // (lo usa el botón del pop-up y se puede compartir en Instagram/WhatsApp)
-  if (location.hash === '#ofertas') {
+  // mtmodas.netlify.app/#ofertas (o #categoria-conjuntos) abre el catálogo filtrado.
+  // Lo usan el pop-up y la portada, y se puede compartir en Instagram/WhatsApp.
+  const vieneDeProducto = hashAnterior.startsWith('#producto-');
+  hashAnterior = location.hash;
+
+  const seccion = hashDeSeccion();
+  if (seccion) {
     detalleOverlay.hidden = true;
     document.body.style.overflow = '';
-    if (categoriaActiva !== 'ofertas') {
-      seleccionarCategoria('ofertas');
-      document.getElementById('catalogo-titulo').scrollIntoView({ behavior: 'smooth' });
-    }
+    if (categoriaActiva !== seccion) seleccionarCategoria(seccion);
+    // Al volver de ver un producto no se mueve la página, para no perder el lugar
+    if (!vieneDeProducto) irAlCatalogo();
     return;
   }
 

@@ -45,9 +45,9 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- Barra superior: mientras haya una promo activa, js/promo.js reemplaza este texto -->
-  <div class="top-announcement-bar">
-    <p id="barraAnuncio">🚚 Envíos a domicilio en Cipolletti y zonas cercanas</p>
+  <!-- Barra superior: los avisos que pasan se editan en js/portada.js (AVISOS_BARRA) -->
+  <div class="top-announcement-bar" id="barraAnuncio">
+    <p>🚚 Envíos a domicilio en Cipolletti y zonas cercanas</p>
   </div>
 
   <header class="site-header">
@@ -71,18 +71,21 @@
     </div>
   </header>
 
-  <!-- Portada: para cambiar la foto, reemplazá la ruta en style="background-image: ..." -->
-  <section class="hero">
-    <div class="hero-txt">
-      <span class="chip">✿ Nueva temporada</span>
-      <h2>Ropa linda,<br><em>precios de amiga</em></h2>
-      <p>Jeans, buzos, remeras y camperas para vos y toda la familia. Envíos en Cipolletti y zonas cercanas.</p>
-      <div class="hero-botones">
-        <a href="#catalogo-titulo" class="btn-principal">Ver catálogo →</a>
-        <a href="https://wa.me/542995185092" target="_blank" rel="noopener" class="btn-secundario-hero">Escribinos</a>
+  <!-- Portada que cambia sola: las fotos y textos se editan en js/portada.js (PORTADAS).
+       Esto de abajo se ve solo un instante, hasta que carga la portada. -->
+  <section class="hero" id="portada" aria-roledescription="carrusel" aria-label="Novedades">
+    <div class="hero-slide activa">
+      <div class="hero-txt">
+        <span class="chip">✿ Nueva temporada</span>
+        <h2>Ropa linda,<br><em>precios de amiga</em></h2>
+        <p>Jeans, buzos, remeras y camperas para vos y toda la familia. Envíos en Cipolletti y zonas cercanas.</p>
+        <div class="hero-botones">
+          <a href="#catalogo-titulo" class="btn-principal">Ver catálogo →</a>
+          <a href="https://wa.me/542995185092" target="_blank" rel="noopener" class="btn-secundario-hero">Escribinos</a>
+        </div>
       </div>
+      <div class="hero-img" role="img" aria-label="Remera floral de María Teresa Modas" style="background-image: url('img/remeras/floral-corazon.jpg')"></div>
     </div>
-    <div class="hero-img" role="img" aria-label="Remera floral de María Teresa Modas" style="background-image: url('img/remeras/floral-corazon.jpg')"></div>
   </section>
 
   <section class="info-bar" aria-label="Información de compra">
@@ -93,6 +96,11 @@
 
   <h2 class="seccion-titulo" id="catalogo-titulo">Nuestro catálogo</h2>
   <p class="seccion-script">elegido con amor</p>
+
+  <div class="buscador">
+    <span class="buscador-icono" aria-hidden="true">🔍</span>
+    <input type="search" id="buscador" placeholder="Buscar: jean, conjunto, rosa…" aria-label="Buscar productos" autocomplete="off">
+  </div>
 
   <!-- Las categorías se arman solas a partir de productos.json -->
   <nav class="tag-rack" id="categorias" aria-label="Secciones del catálogo"></nav>
@@ -135,5 +143,7 @@
 
   <script src="js/main.js"></script>
   <script src="js/promo.js"></script>
+  <script src="js/portada.js"></script>
+  <script src="js/avisos.js"></script>
 </body>
 </html>
