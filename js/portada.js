@@ -13,7 +13,7 @@
 const PORTADAS = [
   {
     soloConOfertas: true,
-    foto: 'img/conjuntos/lilca_crep.jpg',
+    foto: 'img/conjuntos/lila_crep.jpg',
     ajuste: 'completa',
     chip: '🔥 Ofertas',
     titulo: 'Hasta <em>{descuentoMax}% OFF</em>',
