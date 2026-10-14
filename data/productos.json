@@ -849,5 +849,425 @@
       1,
       1
     ]
+  },
+  {
+    "id": 56,
+    "nombre": "Pantalones de Modal rosa",
+    "precio": 17000,
+    "talles": [
+      "40",
+      "42"
+    ],
+    "categoria": "pantalones",
+    "imagenes": [
+      "img/pantalones/pantalon_rosa_modal.jpg",
+      "img/pantalones/pantalon_rosa_modal_espalda.jpg"
+    ],
+    "descripcion": "Pantalones de modal cómodos para todos los dias, frescos y livianos, La modelo usa talle 40.",
+    "stock": [
+      1,
+      1
+    ],
+    "precioAnterior": 27000,
+    "etiqueta": "Oferta"
+  },
+  {
+    "id": 57,
+    "nombre": "Pantalones de Modal beige",
+    "precio": 17000,
+    "talles": [
+      "40",
+      "42"
+    ],
+    "categoria": "pantalones",
+    "imagenes": [
+      "img/pantalones/pantalon_beige_modal-jpg",
+      "img/pantalones/pantalon_beige_modal_espalda.jpg"
+    ],
+    "descripcion": "Pantalon de modal, super cómodo y fresco. La modelo usa un 40.",
+    "stock": [
+      1,
+      1
+    ],
+    "precioAnterior": 27000,
+    "etiqueta": "Oferta"
+  },
+  {
+    "id": 58,
+    "nombre": "Pantalon de Modal gris",
+    "precio": 17000,
+    "talles": [
+      "40",
+      "42"
+    ],
+    "categoria": "pantalones",
+    "imagenes": [
+      "img/pantalones/gris_modal.jpg",
+      "img/pantalones/gris_modal-espalda.jpg"
+    ],
+    "descripcion": "Pantalon de modal fresco y cómodo. La modelo usa un 40.",
+    "stock": [
+      1,
+      1
+    ],
+    "precioAnterior": 27000,
+    "etiqueta": "Oferta"
+  },
+  {
+    "id": 59,
+    "nombre": "Pantalon de Modal negro",
+    "precio": 17000,
+    "talles": [
+      "40",
+      "42"
+    ],
+    "categoria": "pantalones",
+    "imagenes": [
+      "img/pantalones/negro_modal.jpg",
+      "img/pantalones/negro_modal_espalda.jpg"
+    ],
+    "descripcion": "Pantalon de modal freco y cómodo. La modelo usa un 40.",
+    "stock": [
+      1,
+      1
+    ],
+    "precioAnterior": 27000,
+    "etiqueta": "Oferta"
+  },
+  {
+    "id": 60,
+    "nombre": "Pantalon de Modal verde",
+    "precio": 17000,
+    "talles": [
+      "40",
+      "42"
+    ],
+    "categoria": "pantalones",
+    "imagenes": [
+      "img/pantalones/verde_modal.jpg",
+      "img/pantalones/verde_modal_espalda.jpg"
+    ],
+    "descripcion": "Pantalon de modal, frescos y cómodos. La modelo usa un 40.",
+    "stock": [
+      1,
+      1
+    ],
+    "precioAnterior": 27000,
+    "etiqueta": "Oferta"
+  },
+  {
+    "id": 61,
+    "nombre": "Pantalon crep durazno",
+    "precio": 17000,
+    "talles": [
+      "42",
+      "44"
+    ],
+    "categoria": "pantalones",
+    "imagenes": [
+      "img/pantalones/durazno_crep.jpg",
+      "img/pantalones/dureazno_crep_espalda.jpg"
+    ],
+    "descripcion": "Pantalones tela tipo crep, elegantes y frescos. La modelo usa un 42.",
+    "stock": [
+      1,
+      1
+    ],
+    "precioAnterior": 27000,
+    "etiqueta": "Oferta"
+  },
+  {
+    "id": 62,
+    "nombre": "Pantalon crep lila",
+    "precio": 17000,
+    "talles": [
+      "42",
+      "44"
+    ],
+    "categoria": "pantalones",
+    "imagenes": [
+      "img/pantalones/lila_crep.jpg",
+      "img/pantalones/lila_crep_espalda.jpg"
+    ],
+    "descripcion": "Pantalones crep frescos y elegantes. La modelo usa un 42.",
+    "stock": [
+      1,
+      1
+    ],
+    "precioAnterior": 27000,
+    "etiqueta": "Oferta"
+  },
+  {
+    "id": 63,
+    "nombre": "Pantalon crep negro",
+    "precio": 17000,
+    "talles": [
+      "42",
+      "44"
+    ],
+    "categoria": "pantalones",
+    "imagenes": [
+      "img/pantalones/negro_crep.jpg",
+      "img/pantalones/negro_crep_espalda-jpg"
+    ],
+    "descripcion": "Pantalones crep frescos y elegantes. La modelo usa un 42.",
+    "stock": [
+      1,
+      1
+    ],
+    "precioAnterior": 27000,
+    "etiqueta": "Oferta"
+  },
+  {
+    "id": 64,
+    "nombre": "Pantalon crep blanco",
+    "precio": 17000,
+    "talles": [
+      "42",
+      "44"
+    ],
+    "categoria": "pantalones",
+    "imagenes": [
+      "img/pantalones/blanco crep.jpg",
+      "img/pantalones/blanco_crep_espalda.jpg"
+    ],
+    "descripcion": "Pantalones crep elegantes y frescos. La modelo usa un 42.",
+    "stock": [
+      1,
+      1
+    ],
+    "precioAnterior": 27000,
+    "etiqueta": "Oferta"
+  },
+  {
+    "id": 65,
+    "nombre": "Pantalon crep azul",
+    "precio": 17000,
+    "talles": [
+      "42",
+      "44"
+    ],
+    "categoria": "pantalones",
+    "imagenes": [
+      "img/pantalones/azul_crep.jpg",
+      "img/pantalones/azul_crep_espalda.jpg"
+    ],
+    "descripcion": "Pantalones crep elegantes y frescos. La modelo usan un 42.",
+    "stock": [
+      1,
+      1
+    ],
+    "precioAnterior": 27000,
+    "etiqueta": "Oferta"
+  },
+  {
+    "id": 66,
+    "nombre": "Conjuto modal rosa",
+    "precio": 28000,
+    "talles": [
+      "40",
+      "42"
+    ],
+    "categoria": "conjuntos",
+    "imagenes": [
+      "img/conjuntos/pantalon_rosa_modal.jpg",
+      "img/conjuntos/pantalon_rosa_modal_espalda.jpg"
+    ],
+    "descripcion": "Conjunto de modal super fresco y comodos. La modela usa un 40.",
+    "stock": [
+      1,
+      1
+    ],
+    "precioAnterior": 39999,
+    "etiqueta": "Oferta"
+  },
+  {
+    "id": 67,
+    "nombre": "Conjunto modal beige",
+    "precio": 28000,
+    "talles": [
+      "40",
+      "42"
+    ],
+    "categoria": "conjuntos",
+    "imagenes": [
+      "img/conjuntos/pantalon_beige_modal.jpg",
+      "img/conjuntos/pantalon_beige_modal_espalda.jpg",
+      "img/conjuntos/beige_modal.jpg"
+    ],
+    "descripcion": "Conjuntos de modal super comodos y frescos. La modelo usa un 40.",
+    "stock": [
+      1,
+      1
+    ],
+    "precioAnterior": 40000,
+    "etiqueta": "Oferta"
+  },
+  {
+    "id": 68,
+    "nombre": "Conjunto modal gris",
+    "precio": 28000,
+    "talles": [
+      "40",
+      "42"
+    ],
+    "categoria": "conjuntos",
+    "imagenes": [
+      "img/conjuntos/gris_modal.jpg",
+      "img/conjuntos/gris_modal-espalda.jpg"
+    ],
+    "descripcion": "Conjuntos de modal frescos y cómodos, La modelo usa un 40.",
+    "stock": [
+      1,
+      1
+    ],
+    "etiqueta": "Oferta"
+  },
+  {
+    "id": 69,
+    "nombre": "Conjunto modal negro",
+    "precio": 28000,
+    "talles": [
+      "40",
+      "42"
+    ],
+    "categoria": "conjuntos",
+    "imagenes": [
+      "img/conjuntos/negro_modal.jpg",
+      "img/conjuntos/negro_modal_espalda.jpg"
+    ],
+    "descripcion": "Conjuntos de modal cómodos y frescos. La modelo usa un 40.",
+    "stock": [
+      1,
+      1
+    ],
+    "precioAnterior": 40000,
+    "etiqueta": "Oferta"
+  },
+  {
+    "id": 70,
+    "nombre": "Conjunto modal verde",
+    "precio": 28000,
+    "talles": [
+      "40",
+      "42"
+    ],
+    "categoria": "conjuntos",
+    "imagenes": [
+      "img/conjuntos/verde_modal.jpg",
+      "img/conjuntos/verde_modal_espalda.jpg"
+    ],
+    "descripcion": "Conjuntos de modal frescos y cómodos. La modelo usa un 40.",
+    "stock": [
+      1,
+      1
+    ],
+    "precioAnterior": 40000,
+    "etiqueta": "Oferta"
+  },
+  {
+    "id": 71,
+    "nombre": "Conjunto crep durazno",
+    "precio": 28000,
+    "talles": [
+      "42",
+      "44"
+    ],
+    "categoria": "conjuntos",
+    "imagenes": [
+      "img/conjuntos/durazno_crep.jpg",
+      "img/conjuntos/durazno_crep_espalda.jpg"
+    ],
+    "descripcion": "Conjuntos de crep elegantes y frescos. La modelo usa un 42.",
+    "stock": [
+      1,
+      1
+    ],
+    "precioAnterior": 40000,
+    "etiqueta": "Oferta"
+  },
+  {
+    "id": 72,
+    "nombre": "Conjunto crep lila",
+    "precio": 28000,
+    "talles": [
+      "42",
+      "44"
+    ],
+    "categoria": "conjuntos",
+    "imagenes": [
+      "img/conjuntos/lilca_crep.jpg",
+      "img/conjuntos/lila_crep_espalda.jpg"
+    ],
+    "descripcion": "Conjuntos de crep frescos y elegantes. La modelo usa un 42.",
+    "stock": [
+      1,
+      1
+    ],
+    "precioAnterior": 40000,
+    "etiqueta": "Oferta"
+  },
+  {
+    "id": 73,
+    "nombre": "Conjunto crep negro",
+    "precio": 28000,
+    "talles": [
+      "42",
+      "44"
+    ],
+    "categoria": "conjuntos",
+    "imagenes": [
+      "img/conjuntos/negro_crep.jpg",
+      "img/conjuntos/negro_crep_espalda.jpg"
+    ],
+    "descripcion": "Conjuntos de crep frescos y elegantes. La modelo usa un 42.",
+    "stock": [
+      1,
+      1
+    ],
+    "precioAnterior": 40000,
+    "etiqueta": "Oferta"
+  },
+  {
+    "id": 74,
+    "nombre": "Conjunto crep blanco",
+    "precio": 28000,
+    "talles": [
+      "42",
+      "44"
+    ],
+    "categoria": "conjuntos",
+    "imagenes": [
+      "img/conjuntos/blanco crep.jpg",
+      "img/conjuntos/blanco_crep_espalda.jpg"
+    ],
+    "descripcion": "Conjuntos de crep, frescos y elegantes. La modelo usa un 42.",
+    "stock": [
+      1,
+      1
+    ],
+    "precioAnterior": 40000,
+    "etiqueta": "Oferta"
+  },
+  {
+    "id": 75,
+    "nombre": "Conjunto crep azul",
+    "precio": 28000,
+    "talles": [
+      "42",
+      "44"
+    ],
+    "categoria": "conjuntos",
+    "imagenes": [
+      "img/conjuntos/azul_crep.jpg",
+      "img/conjuntos/azul_crep_espalda.jpg"
+    ],
+    "descripcion": "Conjuntos de crep frescos y elegantes. La modelo usa un 42.",
+    "stock": [
+      1,
+      1
+    ],
+    "precioAnterior": 40000,
+    "etiqueta": "Oferta"
   }
 ]
