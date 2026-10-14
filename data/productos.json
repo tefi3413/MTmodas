@@ -881,7 +881,7 @@
     ],
     "categoria": "pantalones",
     "imagenes": [
-      "img/pantalones/pantalon_beige_modal-jpg",
+      "img/pantalones/pantalon_beige_modal.jpg",
       "img/pantalones/pantalon_beige_modal_espalda.jpg"
     ],
     "descripcion": "Pantalon de modal, super cómodo y fresco. La modelo usa un 40.",
@@ -926,7 +926,7 @@
       "img/pantalones/negro_modal.jpg",
       "img/pantalones/negro_modal_espalda.jpg"
     ],
-    "descripcion": "Pantalon de modal freco y cómodo. La modelo usa un 40.",
+    "descripcion": "Pantalon de modal fresco y cómodo. La modelo usa un 40.",
     "stock": [
       1,
       1
@@ -966,7 +966,7 @@
     "categoria": "pantalones",
     "imagenes": [
       "img/pantalones/durazno_crep.jpg",
-      "img/pantalones/dureazno_crep_espalda.jpg"
+      "img/pantalones/durazno_crep_espalda.jpg"
     ],
     "descripcion": "Pantalones tela tipo crep, elegantes y frescos. La modelo usa un 42.",
     "stock": [
@@ -1008,7 +1008,7 @@
     "categoria": "pantalones",
     "imagenes": [
       "img/pantalones/negro_crep.jpg",
-      "img/pantalones/negro_crep_espalda-jpg"
+      "img/pantalones/negro_crep_espalda.jpg"
     ],
     "descripcion": "Pantalones crep frescos y elegantes. La modelo usa un 42.",
     "stock": [
