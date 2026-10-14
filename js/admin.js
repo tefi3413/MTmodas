@@ -10,6 +10,8 @@ const formTituloEl = document.getElementById('formTitulo');
 
 const campoNombre = document.getElementById('campoNombre');
 const campoPrecio = document.getElementById('campoPrecio');
+const campoPrecioAnterior = document.getElementById('campoPrecioAnterior');
+const campoEtiqueta = document.getElementById('campoEtiqueta');
 const campoCategoria = document.getElementById('campoCategoria');
 const campoTalles = document.getElementById('campoTalles');
 const campoStock = document.getElementById('campoStock');
@@ -71,6 +73,8 @@ function cargarEnFormulario(id) {
   formTituloEl.textContent = `Editando: ${p.nombre}`;
   campoNombre.value = p.nombre;
   campoPrecio.value = p.precio;
+  campoPrecioAnterior.value = p.precioAnterior || '';
+  campoEtiqueta.value = p.etiqueta || '';
   campoCategoria.value = p.categoria;
   campoTalles.value = (p.talles || []).join(', ');
   campoStock.value = Array.isArray(p.stock) ? p.stock.join(', ') : '';
@@ -112,6 +116,9 @@ formEl.addEventListener('submit', (e) => {
     descripcion: campoDescripcion.value.trim()
   };
   if (stock) productoData.stock = stock;
+  const precioAnterior = Number(campoPrecioAnterior.value);
+  if (precioAnterior > productoData.precio) productoData.precioAnterior = precioAnterior;
+  if (campoEtiqueta.value.trim()) productoData.etiqueta = campoEtiqueta.value.trim();
 
   if (idEnEdicion) {
     const index = productos.findIndex(p => p.id === idEnEdicion);

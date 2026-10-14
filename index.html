@@ -8,57 +8,94 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="María Teresa Modas — Catálogo">
 <meta property="og:description" content="Jeans, remeras y más. Envíos en Cipolletti y zonas cercanas. Pagá con transferencia, Mercado Pago o efectivo.">
-<meta property="og:image" content="https://tefi3413.github.io/MTmodas/img/preview-og.jpg">
-<meta property="og:url" content="https://tefi3413.github.io/MTmodas/">
+<meta property="og:image" content="https://mtmodas.netlify.app/img/preview-og.jpg">
+<meta property="og:url" content="https://mtmodas.netlify.app/">
 <meta property="og:locale" content="es_AR">
 <meta property="og:site_name" content="María Teresa Modas">
 
 <!-- ===== Descripción general (buscadores) ===== -->
 <meta name="description" content="Catálogo de MT Modas: jeans, remeras y más en Cipolletti, Río Negro.">
+<link rel="canonical" href="https://mtmodas.netlify.app/">
+
+<!-- ===== Datos del negocio para Google (vincula Facebook e Instagram) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ClothingStore",
+  "name": "María Teresa Modas",
+  "url": "https://mtmodas.netlify.app/",
+  "logo": "https://mtmodas.netlify.app/img/logo-mt.png",
+  "image": "https://mtmodas.netlify.app/img/preview-og.jpg",
+  "telephone": "+54 299 518-5092",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Cipolletti",
+    "addressRegion": "Río Negro",
+    "addressCountry": "AR"
+  },
+  "paymentAccepted": "Transferencia, Mercado Pago, Efectivo",
+  "sameAs": [
+    "https://www.facebook.com/profile.php?id=61593674805982",
+    "https://www.instagram.com/mt.modascipo"
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,500&family=Dancing+Script:wght@600&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<!-- Barra superior de anuncios (Top Bar) -->
+  <!-- Barra superior: mientras haya una promo activa, js/promo.js reemplaza este texto -->
   <div class="top-announcement-bar">
-    <p>🚚 Envíos a domicilio $3.000 en Cipolletti y zonas cercanas</p>
+    <p id="barraAnuncio">🚚 Envíos a domicilio en Cipolletti y zonas cercanas</p>
   </div>
 
   <header class="site-header">
     <div class="header-inner">
-      <img src="img/logo-mt.png" alt="María Teresa Modas" class="logo" onerror="this.style.display='none'">
+      <img src="img/logo-mt.png" alt="" class="logo" onerror="this.style.display='none'">
       <div class="brand">
-        <h1>Maria Teresa Modas</h1>
-        <p class="tagline"></p>
+        <span class="brand-script"></span>
+        <h1>María Teresa Modas</h1>
       </div>
       <nav class="contacto-bar" aria-label="Contacto">
         <a href="https://wa.me/542995185092" target="_blank" rel="noopener" class="contacto-link">
           <span class="contacto-icono">☎</span> WhatsApp
         </a>
-        <!-- Verificá que este sea el link/usuario correcto de Instagram -->
-        <a href="https://www.instagram.com/mt.modascipo?igsi=Y2VhbGRteG1xdHJw" target="_blank" rel="noopener" class="contacto-link">
+        <a href="https://www.instagram.com/mt.modascipo" target="_blank" rel="noopener" class="contacto-link">
           <span class="contacto-icono">◎</span> Instagram
         </a>
-        <!-- TODO: reemplazar por el link real de Facebook cuando lo tengas -->
-        <a href="https://www.facebook.com/profile.php?id=61593674805982" class="contacto-link">
+        <a href="https://www.facebook.com/profile.php?id=61593674805982" target="_blank" rel="noopener" class="contacto-link">
           <span class="contacto-icono">f</span> Facebook
         </a>
       </nav>
     </div>
   </header>
 
-  
-  <section class="info-bar">
-  <div class="info-item">
-    <span>💳</span>
-    <p><strong>Medios de pago:</strong> Transferencia, Mercado Pago y Efectivo</p>
-  </div>
-</section>
+  <!-- Portada: para cambiar la foto, reemplazá la ruta en style="background-image: ..." -->
+  <section class="hero">
+    <div class="hero-txt">
+      <span class="chip">✿ Nueva temporada</span>
+      <h2>Ropa linda,<br><em>precios de amiga</em></h2>
+      <p>Jeans, buzos, remeras y camperas para vos y toda la familia. Envíos en Cipolletti y zonas cercanas.</p>
+      <div class="hero-botones">
+        <a href="#catalogo-titulo" class="btn-principal">Ver catálogo →</a>
+        <a href="https://wa.me/542995185092" target="_blank" rel="noopener" class="btn-secundario-hero">Escribinos</a>
+      </div>
+    </div>
+    <div class="hero-img" role="img" aria-label="Remera floral de María Teresa Modas" style="background-image: url('img/remeras/floral-corazon.jpg')"></div>
+  </section>
 
-<!-- Las categorias se van sumando a medida que haya mas productos en el json -->
-<nav class="tag-rack" id="categorias" aria-label="Secciones del catálogo"></nav>
+  <section class="info-bar" aria-label="Información de compra">
+    <div class="info-item"><span>🚚</span><p>Envíos en Cipolletti</p></div>
+    <div class="info-item"><span>💳</span><p>Transferencia, Mercado Pago y efectivo</p></div>
+    <div class="info-item"><span>💬</span><p>Te asesoramos por WhatsApp</p></div>
+  </section>
 
+  <h2 class="seccion-titulo" id="catalogo-titulo">Nuestro catálogo</h2>
+  <p class="seccion-script">elegido con amor</p>
+
+  <!-- Las categorías se arman solas a partir de productos.json -->
+  <nav class="tag-rack" id="categorias" aria-label="Secciones del catálogo"></nav>
 
   <main>
     <p class="status" id="status">Cargando catálogo…</p>
@@ -74,20 +111,29 @@
         <h2 id="detalleNombre"></h2>
         <p class="detalle-precio" id="detallePrecio"></p>
         <div class="detalle-talles" id="detalleTalles"></div>
+        <a class="detalle-whatsapp" id="detalleWhatsapp" href="https://wa.me/542995185092" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+        <p class="detalle-ayuda">Te respondemos por stock, talles y formas de envío.</p>
         <p class="detalle-descripcion" id="detalleDescripcion"></p>
       </div>
     </div>
   </div>
 
   <footer class="site-footer">
-    <p>Maria Teresa Modas — Cipolletti,Río Negro.</p>
-    <nav class="contacto-bar contacto-bar-footer" aria-label="Contacto">
-      <a href="https://wa.me/542995185092" target="_blank" rel="noopener" class="contacto-link">☎ +54 2995185092</a>
-      <a href="https://instagram.com/mtmodas" target="_blank" rel="noopener" class="contacto-link">◎ Instagram</a>
-      <a href="#" class="contacto-link contacto-pendiente">f Facebook</a>
+    <p class="footer-marca">María Teresa Modas</p>
+    <p class="footer-script">gracias por elegirnos</p>
+    <nav class="contacto-bar" aria-label="Contacto">
+      <a href="https://wa.me/542995185092" target="_blank" rel="noopener" class="contacto-link">☎ +54 299 518-5092</a>
+      <a href="https://www.instagram.com/mt.modascipo" target="_blank" rel="noopener" class="contacto-link">◎ Instagram</a>
+      <a href="https://www.facebook.com/profile.php?id=61593674805982" target="_blank" rel="noopener" class="contacto-link">f Facebook</a>
     </nav>
+    <p class="footer-datos">Cipolletti, Río Negro · Envíos a domicilio</p>
   </footer>
 
+  <a class="whatsapp-flotante" href="https://wa.me/542995185092?text=%C2%A1Hola!%20Quer%C3%ADa%20hacer%20una%20consulta" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91A9.86 9.86 0 0 0 12.04 2zm5.8 14.03c-.24.68-1.42 1.3-1.95 1.35-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.11-1.48-1.11-2.82s.7-2 .95-2.27c.25-.27.54-.34.72-.34h.52c.17 0 .39-.06.61.47.23.54.77 1.88.84 2.01.07.14.11.29.02.47-.09.18-.14.29-.27.45-.14.16-.29.36-.41.48-.14.14-.28.28-.12.55.16.27.7 1.16 1.51 1.88 1.04.93 1.91 1.21 2.18 1.35.27.14.43.11.59-.07.16-.18.68-.79.86-1.07.18-.27.36-.23.61-.14.25.09 1.59.75 1.86.88.27.14.45.2.52.32.07.11.07.66-.17 1.34z"/></svg>
+  </a>
+
   <script src="js/main.js"></script>
+  <script src="js/promo.js"></script>
 </body>
 </html>

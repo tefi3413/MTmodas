@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
 <title>Panel de productos — Maria Teresa Modas</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,500&family=Dancing+Script:wght@600&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/admin.css">
 </head>
@@ -45,6 +46,22 @@
           <label>
             Categoría
             <input type="text" id="campoCategoria" required placeholder="pantalones, remeras, buzos...">
+          </label>
+        </div>
+
+        <div class="fila">
+          <label>
+            Precio anterior ($)
+            <span class="ayuda">opcional — si lo cargás, se muestra tachado y con el % de descuento</span>
+            <input type="number" id="campoPrecioAnterior" min="0" step="1" placeholder="35000">
+          </label>
+          <label>
+            Etiqueta
+            <span class="ayuda">opcional — aparece sobre la foto</span>
+            <input type="text" id="campoEtiqueta" list="etiquetasSugeridas" placeholder="Nuevo, Más vendido...">
+            <datalist id="etiquetasSugeridas">
+              <option value="Nuevo"><option value="Más vendido"><option value="Oferta"><option value="Últimas unidades">
+            </datalist>
           </label>
         </div>
 
