@@ -17,6 +17,7 @@ const PROMO = {
   ],
   codigo: '',              
   botonTexto: 'Quiero mi descuento',
+  botonDestino: 'ofertas',         // 'ofertas' = muestra los productos en oferta; 'whatsapp' = abre WhatsApp
   whatsapp: '542995185092',
   mensajeWhatsapp: '¡Hola! Vi la promo del Día de la Madre en la web y quiero consultar 💐',
   legal: 'No acumulable con otras promociones. Hasta agotar stock.',
@@ -61,7 +62,9 @@ const PROMO = {
         <button class="promo-codigo" type="button" title="Copiar código">
           <span>Código</span><strong>${PROMO.codigo}</strong><em>copiar</em>
         </button>` : ''}
-      <a class="promo-boton" href="${linkWhatsapp}" target="_blank" rel="noopener">${PROMO.botonTexto}</a>
+      ${PROMO.botonDestino === 'ofertas'
+        ? `<a class="promo-boton" href="#ofertas">${PROMO.botonTexto}</a>`
+        : `<a class="promo-boton" href="${linkWhatsapp}" target="_blank" rel="noopener">${PROMO.botonTexto}</a>`}
       <button class="promo-seguir" type="button">Seguir mirando el catálogo</button>
       <p class="promo-legal">${PROMO.legal}</p>
     </div>
@@ -78,7 +81,14 @@ const PROMO = {
   overlay.addEventListener('click', (e) => { if (e.target === overlay) cerrar(); });
   overlay.querySelector('.promo-cerrar').addEventListener('click', cerrar);
   overlay.querySelector('.promo-seguir').addEventListener('click', cerrar);
-  overlay.querySelector('.promo-boton').addEventListener('click', cerrar);
+  overlay.querySelector('.promo-boton').addEventListener('click', () => {
+    cerrar();
+    // Si ya se estaba en #ofertas el link no cambia nada, así que bajamos a mano
+    const titulo = document.getElementById('catalogo-titulo');
+    if (PROMO.botonDestino === 'ofertas' && location.hash === '#ofertas' && titulo) {
+      titulo.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
 
   const botonCodigo = overlay.querySelector('.promo-codigo');
   if (botonCodigo) {

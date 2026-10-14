@@ -269,6 +269,8 @@ body{
   font-size: 1.6rem;
 }
 .tag-btn:hover .tag-circulo{ transform: scale(1.05); }
+.tag-ofertas{ color: var(--raspberry); }
+.tag-ofertas .tag-circulo{ background: linear-gradient(45deg, #FF8A3D, var(--raspberry), #FF8A3D); }
 .tag-btn.active{ color: var(--raspberry); }
 .tag-btn.active .tag-circulo{
   background: var(--plum);
