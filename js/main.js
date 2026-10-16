@@ -13,15 +13,23 @@ async function cargarProductos() {
   try {
     const res = await fetch('data/productos.json');
     if (!res.ok) throw new Error('No se pudo leer productos.json');
-    productos = await res.json();
+    const cargados = await res.json();
 
-    if (!productos.length) {
+    if (!cargados.length) {
       statusEl.textContent = 'Todavía no hay productos cargados en data/productos.json';
       return;
     }
 
+    // Los últimos que se subieron aparecen primero. El panel le da a cada
+    // producto nuevo un id más alto, así que se ordena de mayor a menor id
+    // (y si dos tuvieran el mismo, va primero el que está más abajo en el archivo).
+    productos = cargados
+      .map((p, i) => ({ p, i }))
+      .sort((a, b) => (Number(b.p.id) || 0) - (Number(a.p.id) || 0) || b.i - a.i)
+      .map(x => x.p);
+
     statusEl.classList.add('hidden');
-    armarCategorias(productos);
+    armarCategorias(cargados);  // los círculos de categorías mantienen su orden de siempre
     renderProductos(productos);
     revisarHashInicial();
     document.dispatchEvent(new CustomEvent('productos-listos'));
